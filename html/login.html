@@ -1,96 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
-    <link rel="stylesheet" href="../assets/css/login-style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Galada&family=Inter:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/login-style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="content first-content">
-            <div class="first-column">
-                <h2 class="title title-primary">Já possui uma conta?</h2>
-                <p class="description description-primary">Mantanha-se conectado conosco.</p>
-                <p class="description description-primary">Entre com a sua conta pessoal.</p>
-                <button id="signin" class="btn btn-primary">Entrar</button>
-            </div>    
-            <div class="second-column">
-                <h2 class="title title-second">Registre-se!</h2>
-                
-                <hr>
-                
-                <form class="form">
-                    <div class="form-item form-item1">
-                        <label class="label-input" for="">
-                            <i class="far fa-user icon-modify"></i>
-                            <input type="text" placeholder="Nome" required>
-                        </label>
-                        
-                        
-                        <label class="label-input" for="">
-                            <i class="far fa-user icon-modify"></i>
-                            <input type="password" placeholder="Sobrenome" required>
-                        </label>
-                    </div>
+  <section class="container">
+    <div class="form-block">
+      <div class="form-center">
+        <div class="form-container">
+          <p class="title galada-regular">Se Quiser Sim Receitas</p>
+          <hr>
 
-                    <div class="form-item form-item2">
-                        <label class="label-input" for="">
-                            <i class="fas fa-user icon-modify"></i>
-                            <input type="password" placeholder="Apelido" required>
-                        </label>
+          <form class="form" method="post" action="">
+            <input type="email" class="input" name="username" placeholder="Apelido" maxlength="30">
+            <input type="password" class="input" name="password" placeholder="Senha" minlength="8" maxlength="60">
 
-                        <label class="label-input" for="">
-                            <i class="far fa-envelope icon-modify"></i>
-                            <input type="email" placeholder="E-mail" required>
-                        </label>
-                    </div>
+            <label class="checkbox-center">
+              Permanecer logado?
+              <input type="checkbox" class="input" name="logged">
+              <span class="custom-checkbox"></span>
+            </label>
 
-                    <div class="form-item form-item3">
-                        <label class="label-input" for="">
-                            <i class="fas fa-lock icon-modify"></i>
-                            <input type="password" placeholder="Password" required minlength="8">
-                        </label>
-                        
-                        
-                        <button class="btn btn-second">Registrar</button>
-                    </div> 
+            <button class="form-btn" type="submit">Entrar</button>
+          </form>
 
-                </form>
-            </div><!-- second column -->
-        </div><!-- first content -->
-        <div class="content second-content">
-            <div class="first-column">
-                <h2 class="title title-primary">Crie a sua conta</h2>
-                <p class="description description-primary">Registre-se com seus dados pessoais</p>
-                <p class="description description-primary">e inicie uma jornada conosco.</p>
-                <button id="signup" class="btn btn-primary">Registro</button>
-            </div>
-            <div class="second-column">
-                <h2 class="title title-second">Entre com a sua conta</h2>
-                <hr>
-                
-                <form class="form">
-                
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="text" placeholder="Username">
-                    </label>
-                
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
-                    </label>
-                
-                    <a class="password" href="#">Esqueceu a sua senha?</a>
-                    <button class="btn btn-second">Entrar</button>
-                </form>
-            </div><!-- second column -->
-        </div><!-- second-content -->
+          <p class="sign-up-label">
+            Não possui conta? <span class="sign-up-link"><a href="#">Registrar-se</a></span>
+          </p>
+        </div>
+      </div>
     </div>
-    <script src="../assets/js/loginClickEvent.js"></script>
+  </section>
 </body>
+
 </html>
