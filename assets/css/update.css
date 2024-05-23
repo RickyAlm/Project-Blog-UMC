@@ -1,0 +1,109 @@
+:root {
+    --font-lucinda: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;    
+    --primary-blue: #363B61;
+    --secundary-color: #5474A0;
+    --third-color: #AA937F;
+    --fourth-color: #ABA378;
+    --fifth-color: #725157;
+}
+body{
+    background-color: var(--fourth-color);
+}
+a{
+  color: white;
+}
+
+.logo{
+  font-size: 2em;
+}
+
+.nav-update{
+  position: relative;
+}
+.nav-update > ul{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  
+  /* flex-flow: row; */
+}
+
+/* Mostrar senha */
+#olho{
+   cursor: pointer;
+  left: 160px;
+  /* position: absolute; */
+  width: 30px;
+}
+
+.input:focus{
+  transform: scale(1.05);
+  transition: 300ms ease-in-out;
+
+  border: 1px solid #272c4b;
+}
+
+.password:focus{
+  margin-left:4px;
+}
+
+.input:not(:focus){
+  transform: scale(1);
+  transition: 300ms ease-in-out;
+  border: 1px solid var(--secundary-color);
+}
+
+.container-update{
+  margin-top: 10px;
+}
+
+.container-btn{
+  display: flex;  
+  justify-content: space-evenly;
+}
+
+.btn {
+  padding: 10px 15px;
+  font-family: var(--font-lucinda);
+  border-radius: 20px;
+  color: white;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: var(--primary-blue);
+}
+
+.logout, .delete{
+  background-color: red;
+  box-shadow:  rgba(255, 0, 0, 0.74) 0px 5px 10px;
+}
+
+.logout:hover, .delete:hover{
+  background-color: rgb(155, 16, 16);
+  box-shadow:  rgba(255, 0, 0, 0.74) 0px 2px 5px;
+  transition: 400ms ease-in-out;
+
+}
+.btn:active {
+  box-shadow: none;
+}
+
+.submit:hover {
+  background: #262b4b;
+  transition: 200ms ease-in-out;
+}
+
+.btn:not(:hover) {
+  transition: 200ms ease-in-out;
+}
+
+.container-password{
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.password{
+  max-width: 80%;
+}
