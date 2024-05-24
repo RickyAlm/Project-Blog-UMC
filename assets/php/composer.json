@@ -1,0 +1,19 @@
+{
+    "name": "ricky/project-blog-umc",
+    "autoload": {
+        "psr-4": {
+            "Blog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Henrique Almeida",
+            "email": "rick.vieira.almeida@gmail.com"
+        },
+        {
+            "name": "Rafael Garlant",
+            "email": "rafael05garlant@gmail.com"
+        }
+    ],
+    "require": {}
+}

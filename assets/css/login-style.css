@@ -28,13 +28,9 @@ hr {
   font-style: normal;
 }
 
-.form-block {
-  display: block;
-}
-
 /* Section CSS */
 .container {
-  max-width: 700px;
+  width: 700px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -44,14 +40,10 @@ hr {
 
 
 /* Form CSS */
-.form-center {
-  display: flex;
-  justify-content: center;
-}
-
 .form-container {
-  min-width: 380px;
-  max-width: 500px;
+  margin: 0 auto;
+  min-width: 200px;
+  max-width: 370px;
   max-height: 1000px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -63,7 +55,7 @@ hr {
 .title {
   text-align: center;
   margin: 0px;
-  font-size: 30px;
+  font-size: clamp(1.9em, 2vh, 1em);
   font-weight: 500;
 }
 
@@ -93,9 +85,14 @@ hr {
   color: #333333;
 }
 
+.input {
+  border: 1px solid black;
+}
+
 .input-info {
   display: none;
   margin: 5px 0px 0px 10px;
+  color: red;
 }
 
 .page-link {
@@ -109,7 +106,7 @@ hr {
 .page-link-label {
   cursor: pointer;
   font-family: var(--font-lucinda);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
 }
 
@@ -140,6 +137,18 @@ hr {
 .form-btn:not(:hover) {
   background: var(--primary-blue);
   transition: 200ms ease-in-out;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.fname-dn,
+.lname-dn,
+.username-dn,
+.email-dn,
+.password-dn {
+  display: none;
 }
 
 .sign-up-label {
