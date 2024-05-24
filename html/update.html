@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atualize dados</title>
+  <title>Blog - Atualizar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -13,30 +13,31 @@
   <link rel="stylesheet" href="../assets/css/login-style.css">
   <link rel="stylesheet" href="../assets/css/update.css">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/font-aller.css">
 
-  <link rel="shortcut icon" href="../assets/img/icons/chefe-de-cozinha-cinza.png" type="image/x-">
+  <link rel="shortcut icon" href="../assets/img/icons/favicon.ico" type="image/x-">
 </head>
 
-<body>
+<body class="aller-regular">
 
-    <header class="header header-update">
-        <p class="logo">logotipo</p>
+  <header class="header header-update">
+    <p class="logo">logotipo</p>
 
-        <nav class="nav-update">
-            <ul>
-                <li><a href="../html/index.html">início</a></li>
-                <li><a href="../html/update.html">Update</a></li>
-                <li><a href="#">ver</a></li>
-            </ul>
-        </nav>
+    <nav class="nav-update">
+      <ul>
+        <li><a href="../html/index.html">início</a></li>
+        <li><a href="../html/update.html">Update</a></li>
+        <!-- <li><a href="#">ver</a></li> -->
+      </ul>
+    </nav>
 
-    </header>
-    
+  </header>
+
   <section class="container-update">
     <div class="form-block">
       <div class="form-center">
         <div class="form-container">
-          <h2 class="title">Atualize seus dados</h2>
+          <h2 class="title-update .aller-bold">Atualizar Dados</h2>
           <hr>
 
           <form class="form" method="post" action="">
@@ -61,16 +62,18 @@
             </div>
 
             <div class="infos container-password">
-                <input type="password" class="input password" name="password" placeholder="Senha" minlength="8" maxlength="60" id="pass">
-                <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho" class="olho">
-                
-                <span class="input-info">Mínimo 8 caracteres</span>
+              <input type="password" class="input password" name="password" placeholder="Senha" minlength="8"
+                maxlength="60" id="pass">
+              <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho"
+                class="olho">
+
+              <span class="input-info">Mínimo 8 caracteres</span>
             </div>
 
             <div class="container-btn">
-                <button class="btn logout" type="submit">Sair</button>
-                <button class="btn submit" type="submit">Registrar</button>
-                <button class="btn delete" type="submit">Deletar</button>
+              <button class="btn logout" type="submit">Sair</button>
+              <button class="btn submit" type="submit">Registrar</button>
+              <button class="btn delete" type="submit">Deletar</button>
             </div>
           </form>
         </div>
@@ -79,5 +82,6 @@
   </section>
 </body>
 
-<script src="../assets/js/script.js"></script>
+<script src="../assets/js/seePassword.js"></script>
+
 </html>

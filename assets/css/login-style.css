@@ -55,8 +55,7 @@ hr {
 .title {
   text-align: center;
   margin: 0px;
-  font-size: clamp(1.9em, 2vh, 1em);
-  font-weight: 500;
+  font-size: clamp(1.9em, 3vh, 3.2em);
 }
 
 .form {
@@ -81,7 +80,7 @@ hr {
 .infos {
   display: flex;
   flex-flow: column;
-  font-size: 13px;
+  font-size: 13.5px;
   color: #333333;
 }
 
@@ -103,20 +102,9 @@ hr {
   text-decoration-color: #747474;
 }
 
-.page-link-label {
-  cursor: pointer;
-  font-family: var(--font-lucinda);
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.page-link-label:hover {
-  color: #000;
-}
-
 .form-btn {
   padding: 10px 15px;
-  font-family: var(--font-lucinda);
+  font-size: 15px;
   border-radius: 20px;
   color: white;
   border: 0;
@@ -153,14 +141,15 @@ hr {
 
 .sign-up-label {
   margin: 0;
-  font-size: 10px;
+  font-size: 11.9px;
   color: #747474;
   font-family: var(--font-lucinda);
+
 }
 
 .sign-up-link a {
   margin-left: 1px;
-  font-size: 11px;
+  font-size: 11.9px;
   text-decoration: underline;
   text-decoration-color: var(--primary-blue);
   color: var(--primary-blue);

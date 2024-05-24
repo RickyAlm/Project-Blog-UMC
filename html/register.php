@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="../assets/img/icons/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body class="aller-regular">
   <section class="container">
     <div class="form-container">
       <p class="title galada-regular">Se Quiser Sim Receitas</p>

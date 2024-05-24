@@ -1,0 +1,22 @@
+:root {
+  --font: aller, sans-serif;
+  --style: normal;
+}
+
+.aller-light {
+  font-family: var(--font);
+  font-style: var(--style);
+  font-weight: 400;
+}
+
+.aller-regular {
+  font-family: var(--font);
+  font-style: var(--style);
+  font-weight: 400;
+}
+
+.aller-bold {
+  font-family: var(--font);
+  font-style: var(--style);
+  font-weight: 600;
+}

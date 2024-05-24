@@ -1,17 +1,24 @@
 :root {
     --font-lucinda: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;    
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     --primary-blue: #363B61;
     --secundary-color: #5474A0;
     --third-color: #AA937F;
     --fourth-color: #ABA378;
     --fifth-color: #725157;
 }
+
 body{
-    background-color: var(--fourth-color);
+  /* background-color: var(--fourth-color); */
+  background: rgb(226, 226, 226);
 }
+
 a{
   color: white;
+}
+
+.container-update{
+  margin-top: 5%;
 }
 
 .logo{
@@ -21,20 +28,28 @@ a{
 .nav-update{
   position: relative;
 }
+
 .nav-update > ul{
   display: flex;
   position: absolute;
   bottom: 0;
-  
+  list-style-type: none;
+  gap: 15px;
   /* flex-flow: row; */
 }
 
 /* Mostrar senha */
-#olho{
-   cursor: pointer;
+#olho {
+  cursor: pointer;
   left: 160px;
   /* position: absolute; */
   width: 30px;
+}
+
+.title-update {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: clamp(1.9em, 2.5vw, 2.2em);
 }
 
 .input:focus{
@@ -54,12 +69,8 @@ a{
   border: 1px solid var(--secundary-color);
 }
 
-.container-update{
-  margin-top: 10px;
-}
-
 .container-btn{
-  display: flex;  
+  display: flex;
   justify-content: space-evenly;
 }
 
@@ -101,7 +112,8 @@ a{
 
 .container-password{
   flex-flow: row;
-  justify-content: space-between;
+  gap: 20px;
+  /* justify-content: space-between; */
 }
 
 .password{
