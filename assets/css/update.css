@@ -10,7 +10,9 @@
 
 body{
   /* background-color: var(--fourth-color); */
-  background: rgb(226, 226, 226);
+  background-image: url(../img/background/bloco_2/bloco\ 2.png);
+  background-size: cover;
+  background-position: center;
 }
 
 a{
