@@ -1,0 +1,133 @@
+:root {
+    --font-lucinda: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;   
+    --font: aller, sans-serif;
+    --style: normal;
+    
+    --primary-color: #363B61;
+    --secundary-color: #5474A0;
+    --third-color: #AA937F;
+    --fourth-color: #ABA378;
+    --fifth-color: #725157;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.df{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 20px 0;
+    
+}
+
+.InputContainer {
+    max-width: 70%;
+    height: 35px;
+    margin: 10px;
+
+
+    display: flex;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+  }
+     
+  .input {
+    caret-color: rgb(255, 81, 0);
+
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+
+    border: none;
+    
+    outline: none;
+    font-size: 0.9em;
+    
+  }
+   
+  .labelforsearch {
+    cursor: text;
+  }
+
+   .button-search{
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+   }
+
+   .button-search:hover{
+    background: rgb(244, 225, 225);
+   }
+  .searchIcon {
+    width: 13px;
+  }
+      
+  .searchIcon path {
+    fill: rgb(114, 114, 114);
+    margin: 0px;
+    padding: 0px;
+  }
+
+.picture{
+  display: flex;
+  justify-content: space-around;
+
+  /* padding: 30px 0px; */
+  gap: 20px;
+}
+
+.user-img{
+  background-color: white;
+
+  padding: 5px;
+  border-radius: 50%; 
+  max-width: 54px;
+  max-height: 54px;
+}
+
+.fork-img{
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px;
+  max-width: 54px;
+  max-height: 54px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+
+    padding-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
