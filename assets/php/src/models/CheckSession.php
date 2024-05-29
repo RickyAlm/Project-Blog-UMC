@@ -16,12 +16,20 @@ class CheckSession
     }
   }
 
-  public function sessionExists():void
+  public function sessionExists(): void
   {
     // Se a sessão EXISTIR redireciona o usuário para a página home.
     if(isset($_SESSION["user_session"])) {
       header("location: ../html/index.php");
       exit;
     }
+  }
+
+  // Destrói a sessão e redireciona o usuário para a página de login.
+  public function destroySession(): void
+  {
+    session_destroy();
+    header("location: ../../html/login.php");
+    exit;
   }
 }
