@@ -10,7 +10,7 @@
 
 body{
   /* background-color: var(--fourth-color); */
-  background-image: url(../img/background/bloco_2/bloco\ 2.png);
+  background-image: url(../img/background/bloco2.png);
   background-size: cover;
   background-position: center;
 }
@@ -20,7 +20,7 @@ a{
 }
 
 .container-update{
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .logo{
@@ -73,13 +73,15 @@ a{
 
 .container-btn{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .btn {
-  padding: 10px 15px;
-  font-family: var(--font-lucinda);
-  border-radius: 20px;
+  /* padding: 10px 15px; */
+  width: 145px;
+  min-width: 90px;
+  font-size: 15.5px;
+  border-radius: 40px;
   color: white;
   border: none;
   outline: 0;
@@ -88,17 +90,101 @@ a{
   background: var(--primary-blue);
 }
 
-.logout, .delete{
-  background-color: red;
-  box-shadow:  rgba(255, 0, 0, 0.74) 0px 5px 10px;
+.btn-logout,
+.btn-delete{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
 }
 
-.logout:hover, .delete:hover{
-  background-color: rgb(155, 16, 16);
-  box-shadow:  rgba(255, 0, 0, 0.74) 0px 2px 5px;
-  transition: 400ms ease-in-out;
-
+.btn-delete {
+  justify-content: flex-end;
 }
+
+/* plus sign */
+.sign,
+.sign-delete {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign-delete svg {
+  width: 14px;
+}
+
+.sign svg path,
+.sign-delete svg path {
+  fill: white;
+}
+
+/* text */
+.text,
+.text-delete {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+
+/* hover effect on button width */
+.btn-logout:hover,
+.btn-delete:hover {
+  width: 110px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.btn-logout:hover .sign,
+.btn-delete:hover .sign-delete {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 10px;
+}
+
+.btn-delete:hover .sign-delete {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+/* hover effect button's text-delete */
+.btn-logout:hover .text,
+.btn-delete:hover .text-delete {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+
+.btn-delete:hover .text-delete {
+  padding-right: 85%;
+}
+
+/* button click effect*/
+.btn-logout:active {
+  transform: translate(2px ,2px);
+}
+
 .btn:active {
   box-shadow: none;
 }
