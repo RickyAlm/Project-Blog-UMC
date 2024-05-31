@@ -1,0 +1,28 @@
+.nav-style {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 19px;
+}
+
+.page-item .page-link {
+  color: #000000;
+}
+
+.page-link:hover {
+  color: #363B61 !important;
+}
+
+.page-link:focus {
+  box-shadow: 1px 1px 5px 1px #363b612a !important;
+}
+
+.pagination .page-item.active .page-link{
+  color: white;
+  background: #363B61;
+  border-color: #363B61;
+}
+
+.pagination .page-item.active .page-link.page-link:hover{
+  color: white !important;
+}

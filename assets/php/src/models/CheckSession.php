@@ -32,4 +32,21 @@ class CheckSession
     header("location: ../../html/login.php");
     exit;
   }
+
+  // Checa se o usuário é staff, se não for o redireciona para o index.
+  public function checkStaff(): void
+  {
+    if($_SESSION["permission"] != 2){
+      header("location: ../html/index.php");
+      exit;
+    }
+  }
+
+  // Checa se o usuário é staff e retorna o valor do parâmetro $exec.
+  public function checkStaffEcho(string $exec): void
+  {
+    if($_SESSION["permission"] == 2){
+      echo($exec);
+    }
+  }
 }

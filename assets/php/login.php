@@ -34,9 +34,12 @@ if($_POST) {
     // Busca o número de ID do usuário e depois a armazena em uma variável.
     $query_pk = "SELECT pk_user FROM user_ WHERE username = '$username_clean'";
     $get_pk = $connection->query($query_pk)->fetch_row()[0];
+    $query_permission = "SELECT is_staff FROM user_ WHERE pk_user = '$get_pk'";
+    $get_permission = $connection->query($query_permission)->fetch_row()[0];
 
     // Cria um cookie de sessão com o valor do ID do usuário.
     $_SESSION["user_session"] = $get_pk;
+    $_SESSION["permission"] = $get_permission;
     $is_valid = true;
   }
 

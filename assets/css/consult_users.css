@@ -1,0 +1,155 @@
+:root {
+    --font-lucinda: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    --font: aller, sans-serif;
+    --style: normal;
+    --primary-blue: #363B61;
+    --secundary-color: #5474A0;
+    --third-color: #AA937F;
+    --fourth-color: #ABA378;
+    --fifth-color: #725157;
+}
+
+body {
+    font-family: var(--font);
+    background: url(../img/background/bloco2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.header-adm {
+    width: 100%;
+    background-color: var(--primary-blue);
+    padding: 20px;
+    box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.55);
+}
+
+.teste {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+}
+
+.responsive-table {
+    width: 1000px;
+    background-color: rgb(247, 247, 247);
+    margin: 0 auto;
+    margin-top: 2%;
+    padding: 20px;
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.table-title {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #363B61;
+    color: white;
+    text-align: center;
+}
+
+tbody td {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: white;
+    text-align: center;
+}
+
+select {
+    width: 120px;
+    height: 25px;
+    font-size: 14.5px;
+}
+
+.select-permission {
+    text-align: center;
+}
+
+td select {
+    text-align: center;
+}
+
+/* tbody tr:nth-child(2n){
+    background-color: gray;
+} */
+
+.delete-user {
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #e62222;
+    margin: 0 auto;
+}
+
+.delete-user,
+.delete-user span {
+    transition: 200ms;
+}
+
+.delete-user .text {
+    transform: translateX(22px);
+    color: white;
+    font-weight: bold;
+}
+
+.delete-user .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(86px);
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-user svg {
+    width: 14px;
+    fill: #eee;
+}
+
+.delete-user:hover {
+    background: #ff3636;
+}
+
+.delete-user:hover .text {
+    color: transparent;
+}
+
+.delete-user:hover .icon {
+    width: 120px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.delete-user:focus {
+    outline: none;
+}
+
+.delete-user:active .icon svg {
+    transform: scale(0.8);
+}
