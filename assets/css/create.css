@@ -1,0 +1,154 @@
+:root {
+    --font-lucinda: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;   
+    --font: aller, sans-serif;
+    --style: normal;
+    
+    --primary-color: #363B61;
+    --secundary-color: #5474A0;
+    --third-color: #AA937F;
+    --fourth-color: #ABA378;
+    --fifth-color: #725157;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(../img/background/bloco2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-create{
+    height: 15vh;
+    padding: 10px;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-size: 2em;
+
+}
+
+.container-create{
+    margin-top: 2%;
+    margin-bottom: 20px;
+    
+}
+
+.create{
+    box-shadow: 0 10px 25px rgb(0,0 ,0, 0.35 );
+    margin: 0 auto;
+    width: 70%;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+
+.update-img {
+    width: 100%;
+    height: 200px; 
+    margin-bottom: 30px;
+    position: relative;
+
+    background-color: rgb(219, 214, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:15px 15px 0 0 ;
+}
+
+/* Estilizando o parágrafo */
+.update-img p {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+}
+
+/* Estilizando o input de arquivo */
+.update-img input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+
+.info-recipe{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 30px;
+
+}
+
+textarea{
+    margin: 0 auto;;
+}
+
+textarea::placeholder{
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+
+select, input{
+    padding: 10px;
+
+    border-radius: 15px;
+    border: none;
+    max-width: 150px;
+    border: 1px solid var(--primary-color);
+
+}
+
+select:focus, input:focus, textarea:focus{
+    transform: scale(1.02);
+    transition: 300ms ease-in-out;
+    border: 1px solid var(--fifth-color);
+}
+
+select:not(:focus), input:not(:focus), input:not(:focus){
+    transform: scale(1);
+    transition: 300ms ease-in-out;
+}
+
+.ingredients{
+    width: 40px;
+}
+
+select{
+    background-color: white;
+}
+
+option{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+label{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox{
+    display: block;
+    padding: 20px;
+}
+
+.title{
+    text-align: center;
+    font-size: clamp(1.5em, 2vw, 3em);
+    width: 70%;
+}
+
+.title>input{
+    font-size: 100%;
+    min-width: 100%;
+}

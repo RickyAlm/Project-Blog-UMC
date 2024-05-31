@@ -1,0 +1,152 @@
+
+@media screen and (max-width: 480px){
+
+    .header{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+   
+  
+  
+    
+    
+  
+    .container-first-img{
+      margin-bottom: 20px;
+    }
+  
+   
+    .button-create{
+      max-width: 100px;
+      height: auto;
+    }
+  
+  
+  
+    .categories-img{
+      width: 10px;
+      height: 10px;
+    }
+  
+    
+    .user-img, .fork-img{
+      width: 40px;
+      height: 40px;
+      padding-bottom: 0px;
+    }
+  
+  
+    .categories-img{
+      max-width: 70px;
+      max-height: 70px;
+  
+    }
+  
+    .button-container{
+      order: 2;
+  
+      /* background-color: #363b61; */
+    }
+  
+    
+    .container-conteudo{
+      grid-template-columns: 1fr; /* Define uma coluna em dispositivos menores */
+      grid-template-rows: repeat(4, 1fr); 
+      padding: 0;
+      
+    }  
+  }
+  
+  
+  @media screen and (max-width: 500px ){
+    .header{
+      flex-direction: column;
+    }
+
+    .method-preparation, .ingredients{
+      grid-template-columns:1fr;
+    }
+
+    .description{
+      min-width: 90%;
+    }
+
+  }
+
+  @media screen and (max-width: 640px){
+    .container-conteudo{
+      display: flex;
+      flex-direction: column;
+      /* max-width: 90%; */
+      display: -webkit-flex;
+    }
+
+    .conteudo{
+      max-width: 90%;
+      text-align: justify;
+    }
+
+    .container-first-img{
+      min-width: 70%;
+    }
+  }
+  
+  @media screen and (max-width: 700px){
+    .container-food {
+      /* display: grid; */
+      grid-template-columns: 1fr;
+      gap: 30px;
+      /* padding: 20px; */
+  }
+
+  
+  .container-category{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+
+  .header{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .info-recipe{
+    flex-direction: column;
+    gap: 30px;
+}
+}
+
+@media screen and (max-width: 800px){
+  .recipes-img{
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .h3-favicon{
+  text-align: left;
+    order: 3;
+  }
+}
+
+@media (min-width:1000px){
+  .container-food-img{
+    width: 60%;
+  }
+}
+
+@media (min-width: 1250px){
+  .container-first-img{
+    max-width: 20%;
+  }
+  
+}
+
+
+
