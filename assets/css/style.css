@@ -7,12 +7,20 @@
 
 :root {
   --font-lucinda: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;    
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;   
+  --font: aller, sans-serif;
+  --style: normal;
+  
   --primary-color: #363B61;
   --secundary-color: #5474A0;
   --third-color: #AA937F;
   --fourth-color: #ABA378;
   --fifth-color: #725157;
+}
+
+body{
+  font-family: var(--font);
+  font-weight: var(--style);
 }
 
 *{
@@ -22,13 +30,29 @@
   
 }
 
+p{
+  font-family: --font;
+}
+
+span{
+  font: --font;
+  color: black;
+}
+
+.acess{
+  padding-top: 10px;
+}
+
 .btn-acess{
   cursor: pointer;
   color: white;
   background-color: var(--secundary-color);
   padding: 10px 15px;
-  border-radius: 20px;
+  border-radius: 15px 0px 15px 0px;
+  /* border-radius: 15px; */
   border: none;
+
+  width: 100%;
 }
 
 .btn-acess:hover{
@@ -61,12 +85,17 @@
   background-color: var(--primary-blue);
 
   margin-bottom: 20px;
+  padding: 20px 0 ;
 
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.55); */
 
-  height: 15vh;
+  height: auto;
 }
 
+a, ul, li{
+  color: white;
+  list-style-type: none;
+}
 
 .logo{
   margin-bottom: 0;
@@ -203,8 +232,16 @@
 .container-first-img{
   width: 50%;
   background-color: white;
-
+  
+  padding: 10px;
   border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 20px;
 }
 
 
@@ -219,11 +256,20 @@
 
 .content-flex{
   display: flex;
-  flex-wrap: wrap;
-  max-height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 15px 0;
+
+  font-size: 1.3em;
 }
 .p{
   height: auto;
+}
+
+.content-p{
+  padding-bottom: 15px;
 }
 
 /** REPONSIVE TEXT*/
@@ -258,34 +304,6 @@
   font-size: clamp(.9em, 2.5vw, 1.3em);
 }
 
-/* .button-container{
-  width: 30%;
-  height: auto;
-  margin: 25px auto 25px auto;
-  padding: 10px;
-
-  border: 2px solid rgba(255, 255, 255, 0.558);
-  border-radius: 18px;
-
-  background-color: transparent;
-  color: rgb(10, 9, 9);
-
-  cursor: pointer;
-
-}
-
-.button-container:hover{
-  box-shadow: inset 0px 0px 10px 5px #749ed8;
-  transition: 800ms ease-in-out;
-}
-
-.button-container:not(:hover){
-
-  box-shadow: 0pc 0pc 10px 10px #7091c0;
-
-  transition: 300ms ease-in-out;
-} */
-
 
 .button-container {
   width: 30%;
@@ -301,12 +319,17 @@
 
   cursor: pointer;
 
-  box-shadow: 0px 0px 10px 10px #7091c0; 
-  transition: box-shadow 300ms ease-in-out;
 }
 
 .button-container:hover {
-  box-shadow: inset 0px 0px 20px 10px #7091c0; 
+  transform: scale(1.02);
+  transition: 300ms ease-in-out;
+  box-shadow: 0 0 5px 5px rgba(104, 95, 95, 0.349);
+}
+
+.button-container:not(:hover){
+  transform: scale(1);
+  transition: 300ms ease-in-out;
 }
 
 
@@ -338,21 +361,14 @@
 
 /*! ############# START MAIN #############*/
 
-.background3{
-  background-image: url(../img/background/ORFF0J0\ 2.png);
+.background2{
+  background-image: url(../img/background/bloco2.png);
   
   background-size: cover;
   height: auto;
-  display: grid;
-  place-items: center;
-
-  /* padding-bottom: 30px; */
+  
 }
 
-.background4{
-  background: #cac6c2;
-  padding-bottom: 30px;
-}
 
 .categories{
   display: flex;
@@ -406,8 +422,8 @@
   align-items: start;
   justify-items: center;
 
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 1fr;
   gap: 20px;
 
   border-radius: 15px;
@@ -458,25 +474,7 @@
 
 /*! ############# START FOOTER #############*/
 
-footer{
-  background-color: rgb(94, 81, 81);
-}
 
-.social-media{
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 10px;
-  color: white;
-}
-
-.copyright{
-  background-color: rgb(48, 43, 43);
-  color: white;
-  text-align: center;
-  
-  padding-top: 10px;
-  height: 40px;
-}
 /*! ############# END FOOTER #############*/
 
 /** ##########################*/
