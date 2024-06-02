@@ -1,9 +1,9 @@
 :root {
     --font-lucinda: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;   
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     --font: aller, sans-serif;
     --style: normal;
-    
+
     --primary-color: #363B61;
     --secundary-color: #5474A0;
     --third-color: #AA937F;
@@ -11,18 +11,18 @@
     --fifth-color: #725157;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     background-image: url(../img/background/bloco2.png);
     background-position: center;
     background-size: cover;
 }
 
-.header-create{
+.header-create {
     height: 15vh;
     padding: 10px;
     background-color: var(--primary-color);
@@ -31,16 +31,17 @@ body{
 
 }
 
-.container-create{
+.container-create {
+    max-width: 1000px;
+    margin: 0 auto;
     margin-top: 2%;
     margin-bottom: 20px;
-    
+
 }
 
-.create{
-    box-shadow: 0 10px 25px rgb(0,0 ,0, 0.35 );
+.create {
+    box-shadow: 0 10px 25px rgb(0, 0, 0, 0.35);
     margin: 0 auto;
-    width: 70%;
     background-color: #ffffff;
     border-radius: 15px;
 }
@@ -48,7 +49,7 @@ body{
 
 .update-img {
     width: 100%;
-    height: 200px; 
+    height: 200px;
     margin-bottom: 30px;
     position: relative;
 
@@ -56,7 +57,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius:15px 15px 0 0 ;
+    border-radius: 15px 15px 0 0;
 }
 
 /* Estilizando o parágrafo */
@@ -73,82 +74,181 @@ body{
     width: 100%;
     height: 100%;
     cursor: pointer;
-
 }
 
 
-.info-recipe{
+.info-recipe {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 30px;
     gap: 30px;
 
 }
 
-textarea{
-    margin: 0 auto;;
+textarea {
+    margin: 0 auto;
+    ;
 }
 
-textarea::placeholder{
+textarea::placeholder {
     text-align: center;
     padding-top: 10px;
 }
 
-
-
-select, input{
+select,
+input {
     padding: 10px;
 
     border-radius: 15px;
     border: none;
     max-width: 150px;
     border: 1px solid var(--primary-color);
-
 }
 
-select:focus, input:focus, textarea:focus{
+select:focus,
+input:focus,
+textarea:focus {
     transform: scale(1.02);
     transition: 300ms ease-in-out;
     border: 1px solid var(--fifth-color);
 }
 
-select:not(:focus), input:not(:focus), input:not(:focus){
+select:not(:focus),
+input:not(:focus),
+input:not(:focus) {
     transform: scale(1);
     transition: 300ms ease-in-out;
 }
 
-.ingredients{
-    width: 40px;
+.ingredients {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
 }
 
-select{
+select {
     background-color: white;
 }
 
-option{
+option {
     background-color: var(--primary-color);
     color: white;
 }
 
-
-label{
+label {
     display: flex;
     flex-direction: column;
 }
 
-.checkbox{
+.checkbox {
     display: block;
     padding: 20px;
+    margin: 0 auto;
 }
 
-.title{
+.title {
     text-align: center;
     font-size: clamp(1.5em, 2vw, 3em);
     width: 70%;
 }
 
-.title>input{
+.title>input {
     font-size: 100%;
     min-width: 100%;
+}
+
+.ingredients-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+
+    width: 40px;
+    height: 40px
+}
+
+.button-add {
+    background: #37c40d;
+}
+
+.button-add:hover {
+    box-shadow: 0 0.5em 1.5em 2px #14a73e98;
+    cursor: pointer;
+}
+
+.button-delete {
+    background: #d80d0d;
+}
+
+.button-delete:hover {
+    box-shadow: 0 0.5em 1.5em 2px #a0221298;
+    cursor: pointer;
+}
+
+/* plus sign */
+.sign {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: white;
+}
+
+.btns {
+    display: flex;
+    /* width: 50%; */
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    flex-flow: column nowrap;
+    padding: 25px;
+}
+
+.form-btn {
+    /* width: 30%; */
+    margin: 0 auto;
+    padding: 12px 200px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid black;
+}
+
+.form-btn:active {
+    box-shadow: none;
+}
+
+.form-btn:hover {
+    background: #242d64;
+    transition: 200ms ease-in-out;
+}
+
+.form-btn:not(:hover) {
+    background: #262b4b;
+    transition: 200ms ease-in-out;
+}
+
+#delete-recipe-button {
+    background: #ca0808;
+    border: 1px solid black;
+}
+
+#delete-recipe-button:hover {
+    background: #aa1d1d;
+    transition: 200ms ease-in-out;
 }
