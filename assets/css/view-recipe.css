@@ -1,6 +1,6 @@
 :root {
     --font-lucinda: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;    
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     --primary-color: #363B61;
     --secundary-color: #5474A0;
     --third-color: #AA937F;
@@ -8,55 +8,49 @@
     --fifth-color: #725157;
 }
 
-body{
-    
-    background-color: rgba(166, 189, 209, 0.274);
-    background-color: var(--fifth-color);
-}
-
-.background1{
-    /* background-image: url(../img/background/ORFF0J0.png); */
+body {
+    /* background-color: rgba(166, 189, 209, 0.274); */
+    background-image: url(../img/background/bloco2.png);
     background-position: center;
     background-size: cover;
-    
 }
 
-.header-recipe{
+.header-recipe {
     background-color: var(--primary-color);
     box-shadow: 0 0px 15px 10px rgba(0, 0, 0, 0.35);
 }
 
-.header-nav > ul > li > a{
+.header-nav>ul>li>a {
     font-size: clamp(1em, 5vh, 1.5em);
     text-decoration: none;
 }
 
-a{
+a {
     position: relative;
 }
 
-.header-nav > ul > li > a::after{
+.header-nav>ul>li>a::after {
     content: " ";
-  
+
     width: 0%;
     height: 3px;
-  
+
     background-color: var(--secundary-color);
-  
+
     position: absolute;
     bottom: 0;
     left: 0;
-  
-    transition: 0.5s ease-in-out;
-  }
-  
-  .header-nav > ul > li > a:hover::after{
-    width: 100%;
-  }
 
-.recipe{
+    transition: 0.5s ease-in-out;
+}
+
+.header-nav>ul>li>a:hover::after {
+    width: 100%;
+}
+
+.recipe {
     margin: 0 auto;
-    width: 90%;
+    width: 1000px;
     padding-bottom: 1px;
     background-color: rgba(255, 255, 255, 0.9);
 
@@ -69,7 +63,7 @@ a{
 
 }
 
-.h2-recipe{
+.h2-recipe {
     text-align: center;
     font-size: clamp(2em, 10vw, 5em);
 
@@ -77,7 +71,7 @@ a{
     padding: 30px 0;
 }
 
-.recipes-img{
+.recipes-img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -88,14 +82,14 @@ a{
     order: 1;
 }
 
-.h3-favicon{
+.h3-favicon {
     display: flex;
     align-items: center;
     gap: 20px;
 
 }
 
-.food-recipes{
+.food-recipes {
     max-width: 400px;
     min-width: 190px;
 
@@ -104,20 +98,20 @@ a{
 
 
 
-.img-title{
+.img-title {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-left: 20px;
 }
 
-.img-title>img{
+.img-title>img {
     width: 30px;
 }
 
 
 
-.description{
+.description {
     text-align: center;
     padding: 10px;
     font-size: clamp(18px, 5vw, 25px);
@@ -127,27 +121,31 @@ a{
     max-width: 70%;
 }
 
-.timer{
+.timer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
     background-color: #ccc;
-    text-align: center;
     padding: 20px 0;
     margin-bottom: 20px;
-    font-size: clamp(1em, 4vw, 3em);
+    font-size: clamp(1em, 3vw, 3em);
 }
 
-.h3-ingredients, .h3-step{
-    font-size: clamp(1.5em , 4vw, 3.5em);
+.h3-ingredients,
+.h3-step {
+    font-size: clamp(1.5em, 4vw, 3.5em);
 
     padding: 10px 30px;
 }
 
-.h3-description{
+.h3-description {
     font-size: clamp(1em, 3vh, 2.5em);
 }
 
-.method-preparation, .ingredients{
+.method-preparation,
+.ingredients {
     display: grid;
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     font-size: clamp(20px, 3vw, 30px);
 
