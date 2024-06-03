@@ -27,7 +27,7 @@
     $sql_query = $connection->query($sql);
 
     // Verifica se existe algum registro na consulta.
-    if($total_users == 0) die("<h2 class='display-5 text-center'>No Recipes Found</h2>");
+    if($total_users == 0) die("<h2 class='display-5 text-center'>No Users Found</h2>");
 ?>
 
 <!DOCTYPE html>
