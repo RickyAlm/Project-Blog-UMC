@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Custom Select</title>
     <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/media-query.css">
 </head>
+
 <body>
-    <header>
-        <div class="df">
-            <p>LOGOTIPO</p>
+    <header class="header">
+        <!-- <div class="container-nav"> -->
+        <nav class="nav">
+            <div class="logotipo">
+                <button class="hamburguer"></button>
+                <h1><a href="" class="logo">Logo</a></h1>
+            </div>
+
             <div class="InputContainer">
                 <input type="text" name="text" class="input navbar" id="input" placeholder="Pesquisar...">
                 <label for="input" class="labelforsearch">
@@ -20,20 +27,28 @@
                 </label>
             </div>
 
-            <div class="picture">
-                <a href="update.html"><img class="user-img" src="../assets/img/icons/user.png" alt=""></a>
-  
-                <a href="category.html"><img class="fork-img" src="../assets/img/icons/fork.png" alt=""></a>
-            </div>
-  
-        </div>
+            <ul class="nav-list">
+                <li><a href="index.php" class="a infos">Inicio</a></li>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="update.html">Atualize seus dados</a></li>
+                <li><a href="view_recipes.php" class="infos a">Receitas</a></li>
+
+                <li><a href="update.php" class="infos a">Meu Perfil</a></li>
+
+                <li><a href="consult_users.php" class="infos a">Permissões</a></li>
+                
+                <li><a href="create.php" class="infos a">Criar Receita</a></li>
+
+
+                <li class="infos2">
+                    <a href="" class="img a"><img class="nav-images nav-images2" src="../assets/img/icons/fork.png" alt="">
+                    </a>
+                    <a class="img a" href="update.php"><img class="nav-images nav-images2" src="../assets/img/icons/user.png" alt=""></a>
+                </li>
             </ul>
         </nav>
+        <!-- </div> -->
     </header>
+    <script src="../assets/js/createClassName.js"></script>
 </body>
+
 </html>
