@@ -10,11 +10,6 @@
       gap: 10px;
       margin-bottom: 30px;
     }
-   
-  
-  
-    
-    
   
     .container-first-img{
       margin-bottom: 20px;
@@ -68,8 +63,18 @@
       flex-direction: column;
     }
 
-    .method-preparation, .ingredients{
+    .nav-list{
+      padding-top: 10px;
+    }
+
+    .method-preparation, .ingredients-recipe{
       grid-template-columns:1fr;
+    }
+
+    .ingredients{
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
 
     .description{

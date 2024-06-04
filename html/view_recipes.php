@@ -8,7 +8,7 @@
     $consult_recipe = new ConsultRecipe;
 
     $check_session = new CheckSession;
-    $check_session->sessionNotExists();
+    // $check_session->sessionNotExists();
 
     // Indica a quantidade de itens que deve aparecer na página.
     $per_page = 2;
@@ -48,9 +48,7 @@
     <link rel="shortcut icon" href="../assets/img/icons/favicon.ico" type="image/x-">
 
 <body class="aller-regular">
-    <header class="header header-category">
-        <p class="logo">LOGOTIPO</p>
-    </header>
+<?php require_once 'header.html';?>
 
     <section class="category">
         <h1 class="h1-category">Sua pesquisa: Todas as receitas</h1>
@@ -81,7 +79,7 @@
                                 <p>" . $row['description_recipe'] . "</p>
                             </div>
 
-                            <a href='recipe_card.php?recipe=" . $row['pk_recipe'] . "'><button type='button'>Ver mais</button></a>
+                            <a href='recipe_card.php?recipe=" . $row['pk_recipe'] . "' class='acess'><button type='button' class='btn-acess'>Ver mais</button></a>
                         </div>"
                     );
                 }
@@ -94,16 +92,7 @@
             </ul>
         </nav>
     </section>
-    <footer>
-        <section class="social-media">
-            <p class="logo">LOGOTIPO</p>
-            <p>INSTAGRAM</p>
-        </section>
-
-        <section class="copyright">
-            &copy; Blog Receitas Todos os direitos reservados
-        </section>
-    </footer>
+    <?php require_once 'footer.html';?>
 </body>
 
 </html>
