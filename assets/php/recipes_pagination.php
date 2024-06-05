@@ -1,15 +1,7 @@
 <?php
 
-
 // Define o máximo de páginas que deverão aparecer antes e depois da página atual.
 $max_links = 2;
-
-if(!isset($_GET['filter-is-staff'])) {
-    $is_staff = 3;
-}
-else {
-    $if_staff = $_GET['filter-is-staff'];
-}
 
 if(!isset($_GET['q'])) {
     $q = '';
@@ -23,7 +15,7 @@ else {
 if ($current_page > 1) {
     echo (
         "<li class='page-item'>
-        <a class='page-link' href='?page=1&q=" . $q . "&filter-is-staff=" . $is_staff . "'>Primeira</a>
+        <a class='page-link' href='?page=1&q=" . $q . "'>Primeira</a>
         </li>"
     );
 }
@@ -33,7 +25,7 @@ for($previous_page = $current_page - $max_links; $previous_page <= $current_page
     if($previous_page >= 1) {
         echo(
             "<li class='page-item'>
-                <a class='page-link' href='?page=" . $previous_page . "&q=" . $q . "&filter-is-staff=" . $is_staff ."'>$previous_page</a>
+                <a class='page-link' href='?page=" . $previous_page . "&q=" . $q . "'>$previous_page</a>
             </li>"
         );
     }
@@ -43,7 +35,7 @@ for($previous_page = $current_page - $max_links; $previous_page <= $current_page
 // Insere a página atual do usuário.
 echo(
     "<li class='page-item active'>
-        <a class='page-link' href='?page=" . $current_page . "&q=" . $q . "&filter-is-staff=" . $is_staff ."'>$current_page</a>
+        <a class='page-link' href='?page=" . $current_page . "&q=" . $q . "'>$current_page</a>
     </li>"
 );
 
@@ -52,7 +44,7 @@ for($next_page = $current_page + 1; $next_page <= $current_page + $max_links; $n
     if($next_page <= $total_pages){
         echo(
             "<li class='page-item'>
-                <a class='page-link' href='?page=" . $next_page . "&q=" . $q . "&filter-is-staff=" . $is_staff ."'>$next_page</a>
+                <a class='page-link' href='?page=" . $next_page . "&q=" . $q . "'>$next_page</a>
             </li>"
         );
     }
@@ -63,7 +55,7 @@ for($next_page = $current_page + 1; $next_page <= $current_page + $max_links; $n
 if ($current_page < $total_pages) {
     echo (
         "<li class='page-item'>
-        <a class='page-link' href='?page=" . $total_pages . "&q=" . $q . "&filter-is-staff=" . $is_staff . "'>Última</a>
+        <a class='page-link' href='?page=" . $total_pages . "&q=" . $q . "'>Última</a>
         </li>"
     );
 }

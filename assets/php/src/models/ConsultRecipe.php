@@ -11,9 +11,9 @@ class ConsultRecipe
             recipes.pass_to_pass, recipes.created_at, recipes.updated_at, 
             category.pk_category, category.category_name, portions.pk_portions, 
             portions.portions_name, recipes.preparation_time,
-            recipes.is_published, recipes.fk_user, contain.quantity,
-            ingredients.pk_ingredient, ingredients.ingredient_name,
-            user_.username
+            recipes.is_published, recipes.fk_user, recipes.recipe_image, 
+            contain.quantity, ingredients.pk_ingredient,
+            ingredients.ingredient_name, user_.username
         FROM
             recipes, contain, ingredients, category, portions, user_
         WHERE

@@ -4,8 +4,6 @@ use Blog\models\ConsultRecipe;
 require_once 'connection.php';
 require_once 'vendor/autoload.php';
 
-$consult_recipe = new ConsultRecipe;
-
 if($_POST) {
     $pk_recipe = $_POST['pk-recipe'];
     $title_recipe = $_POST['recipe-title'];
@@ -31,8 +29,30 @@ if($_POST) {
         description_recipe = '$description_recipe', pass_to_pass = '$pass_to_pass',
         updated_at = '$current_date_time', fk_category = '$category',
         fk_portion = '$portions', preparation_time = '$preparation_time',
-        is_published = '$is_published'
-        WHERE pk_recipe = '$pk_recipe'";
+        is_published = '$is_published'";
+
+    if (isset($_FILES['recipe-image'])) {
+        $a = "SELECT recipe_image FROM recipes WHERE pk_recipe = '$pk_recipe'";
+        $ab = $connection->query($a)->fetch_row()[0];
+
+        if($_FILES['recipe-image'] != $ab){
+            unlink("../img/recipes_images/$ab");
+        }
+
+        $recipe_image = $_FILES['recipe-image'];
+        $fileName = $recipe_image['name'];
+        $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
+        $fileTempPath = $recipe_image['tmp_name'];
+        $fileSize = $recipe_image['size'];
+
+        // Criar nome de arquivo único
+        $newFileName = uniqid() . "." . $fileExtension;
+        move_uploaded_file($fileTempPath, "../img/recipes_images/" . $newFileName);
+
+        $query_update_recipe .= ", recipe_image = '$newFileName'";
+    }
+
+    $query_update_recipe .= " WHERE pk_recipe = '$pk_recipe'";
 
     $update_recipe = $connection->query($query_update_recipe);
 

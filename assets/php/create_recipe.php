@@ -3,7 +3,6 @@ require_once 'connection.php';
 session_start();
 
 if($_POST) {
-  // $recipe_image = $_FILES['recipe-image'];
   $recipe_title = $_POST['recipe-title'];
   $recipe_description = $_POST['recipe-description'];
   $preparation_time = $_POST['preparation-time'];
@@ -19,17 +18,31 @@ if($_POST) {
     $is_published = 2;
   }
 
+  if (isset($_FILES['recipe-image'])) {
+    $recipe_image = $_FILES['recipe-image'];
+    $fileName = $recipe_image['name'];
+    $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
+    $fileTempPath = $recipe_image['tmp_name'];
+    $fileSize = $recipe_image['size'];
+  
+    // Criar nome de arquivo único
+    $newFileName = uniqid() . "." . $fileExtension;
+    move_uploaded_file($fileTempPath, "../img/recipes_images/" . $newFileName);
+  }
+
   date_default_timezone_set('America/Sao_Paulo');
   $now_date_time = new DateTime('now');
   $current_date_time = $now_date_time->format('Y-m-d H:i:s');
 
   $create_recipe = "INSERT INTO recipes(
-      title_recipe, description_recipe, pass_to_pass, created_at, fk_category,
-      fk_portion, preparation_time, is_published, fk_user
-    ) VALUES (
-      '$recipe_title', '$recipe_description', '$pass_to_pass', '$current_date_time',
-      '$category', '$portion', '$preparation_time', $is_published, $pk_user
-    )";
+    title_recipe, description_recipe, pass_to_pass, created_at, fk_category,
+    fk_portion, preparation_time, is_published, fk_user, recipe_image
+  ) VALUES (
+    '$recipe_title', '$recipe_description', '$pass_to_pass', '$current_date_time',
+    '$category', '$portion', '$preparation_time', $is_published, $pk_user,
+    '$newFileName'
+  )";
+
   $query_recipe = $connection->query($create_recipe);
 
   $get_last_recipe_pk = "SELECT pk_recipe FROM recipes ORDER BY pk_recipe DESC LIMIT 1";

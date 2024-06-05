@@ -37,7 +37,7 @@
     </header>
 
     <section class="container-create">
-        <form action="../assets/php/create_recipe.php" class="create form" method="post">
+        <form action="../assets/php/create_recipe.php" class="create form" method="post" enctype="multipart/form-data">
             <div class="update-img">
                 <p>UPLOAD</p>
                 <input type="file" name="recipe-image">
@@ -150,5 +150,7 @@
 
 
 </body>
+
+<script src="../assets/js/addNewIngredient.js"></script>
 
 </html>

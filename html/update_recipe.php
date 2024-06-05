@@ -1,13 +1,4 @@
 <?php
-    use Blog\models\CheckSession;
-
-    require_once '../assets/php/vendor/autoload.php';
-
-    $check_session = new CheckSession;
-
-    $check_session->sessionNotExists();
-    $check_session->checkStaff();
-
     require_once "../assets/php/connection.php";
     require_once "../assets/php/recipe_datas.php";
     require_once '../assets/php/vendor/autoload.php';
@@ -32,7 +23,7 @@
     </header>
 
     <section class="container-create">
-        <form action="../assets/php/update_recipes.php" class="create form" method="post">
+        <form action="../assets/php/update_recipes.php" class="create form" method="post" enctype="multipart/form-data">
             <div class="update-img">
                 <p>UPLOAD</p>
                 <input type="file" name="recipe-image">
@@ -105,20 +96,6 @@
                     <label for="ingredients">
                         <h3>Ingredients</h3>
 
-                        <select name="ingredients">
-                            <?php
-                                echo("<option value='" . $recipe_datas['pk_ingredient'] . "'>" . $recipe_datas['ingredient_name'] . "</option>");
-
-                                foreach($datas_ingredients as $row){
-                                    if(
-                                        $row['pk_ingredient'] != $recipe_datas['pk_ingredient'] &&
-                                        $row['ingredient_name'] != $recipe_datas['ingredient_name']
-                                    ) {
-                                        echo("<option value='" . $row['pk_ingredient'] . "'>" . $row['ingredient_name'] . "</option>");
-                                    }
-                                };
-                            ?>
-                        </select>
                     </label>
 
                     <button class="ingredients-buttons button-add" type="button">

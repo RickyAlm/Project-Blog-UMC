@@ -11,16 +11,20 @@
     $check_session->sessionNotExists();
 
     $pk_recipe = $_GET['recipe'];
+
     $query_recipe = $connection->query($consult_recipe->selectRecipeNames($pk_recipe));
     $recipe_datas = $query_recipe->fetch_assoc();
 
+    // Caso for buscado uma receita com ID que não exista, redireciona para a
+    // pagina de busca com todas as receitas.
     if(!isset($recipe_datas['pk_recipe'])) {
         header('location: view_recipes.php');
         exit;
     }
 
+    // Formata a data do banco de dados para o padrão brasileiro.
     $created_at = new DateTime($recipe_datas['created_at']);
-    $formatted_date = $created_at->format('d/m/Y')
+    $formatted_date = $created_at->format('d/m/Y');
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +33,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver receitas</title>
+    <title>Blog | <?php echo($recipe_datas['title_recipe']) ?></title>
     <link rel="shortcut icon" href="../assets/img/icons/chefe-de-cozinha-cinza.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -51,10 +55,9 @@
 
     <section class="recipe">
         <picture class="recipes-img">
-            <!-- <div>
-                    <img src="../assets/img/recipes/pexels-dbaler-17486840.jpg" alt="Imagem da receita"
-                    class="food food-recipes">
-                </div> -->
+            <div>
+                <img src="../assets/img/recipes_images/<?php echo($recipe_datas['recipe_image']) ?>" class="food food-recipes">
+            </div>
         </picture>
 
         <div class="container-description">
