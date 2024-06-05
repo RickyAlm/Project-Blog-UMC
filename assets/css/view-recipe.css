@@ -15,42 +15,9 @@ body {
     background-size: cover;
 }
 
-.header-recipe {
-    background-color: var(--primary-color);
-    box-shadow: 0 0px 15px 10px rgba(0, 0, 0, 0.35);
-}
-
-.header-nav>ul>li>a {
-    font-size: clamp(1em, 5vh, 1.5em);
-    text-decoration: none;
-}
-
-a {
-    position: relative;
-}
-
-.header-nav>ul>li>a::after {
-    content: " ";
-
-    width: 0%;
-    height: 3px;
-
-    background-color: var(--secundary-color);
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    transition: 0.5s ease-in-out;
-}
-
-.header-nav>ul>li>a:hover::after {
-    width: 100%;
-}
 
 .recipe {
     margin: 0 auto;
-    width: 1000px;
     padding-bottom: 1px;
     background-color: rgba(255, 255, 255, 0.9);
 

@@ -30,18 +30,7 @@ $check_session->sessionNotExists();
 
 <body class="aller-regular">
 
-  <header class="header header-update">
-    <p class="logo">FUTURA HEADER</p>
-
-    <!-- <nav class="nav-update"> -->
-    <!-- <ul> -->
-    <!-- <li><a href="../html/index.html">início</a></li> -->
-    <!-- <li><a href="../html/update.html">Update</a></li> -->
-    <!-- <li><a href="#">ver</a></li> -->
-    <!-- </ul> -->
-    <!-- </nav> -->
-
-  </header>
+<?php require_once 'header.html';?>
 
   <section class="container-update">
     <div class="form-block">
@@ -50,7 +39,7 @@ $check_session->sessionNotExists();
           <h2 class="title-update .aller-bold">Atualizar Dados</h2>
           <hr>
 
-          <!-- <form class="form" method="post" action="../assets/php/update.php"> -->
+
           <form class="form" method="post">
             <div class="infos">
               <input type="text" class="input" name="first-name" placeholder="Nome" maxlength="30"

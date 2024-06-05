@@ -104,7 +104,7 @@
         </div>
 
         <h3 class="h3-ingredients">Ingredientes</h3>
-        <div class="ingredients">
+        <div class="ingredients-recipe">
             <p>
                 <?php echo($recipe_datas['quantity']) ?> de
                 <?php echo($recipe_datas['ingredient_name']) ?>

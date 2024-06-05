@@ -29,6 +29,8 @@
 </head>
 
 <body class="aller-regular">
+    <?php require_once 'header.html';?>
+
     <form action="consult_users.php" class="InputContainer" method="get">
         <label for="input" class="labelforsearch">
             <input type="search" name="q" class="input navbar" id="input" placeholder="Pesquisar...">
