@@ -11,7 +11,7 @@
     // $check_session->sessionNotExists();
 
     // Indica a quantidade de itens que deve aparecer na página.
-    $per_page = 2;
+    $per_page = 6;
     // Armazena a página atual do usuário.
     $current_page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
     // Armazena a página inicial.

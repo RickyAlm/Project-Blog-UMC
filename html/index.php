@@ -32,18 +32,18 @@
                   <img src="../assets/img/recipes/pexels-valeriya-842571.jpg" alt="Imagem de capa do card">
               </div>
               <div class="content">
-                  <div class="content-flex">
+                  <div class="content-flex-first">
                       <p>Bolo de tapioca</p>
                     </div>
-                    <div class="content-flex">
-                      <p></p>
-                      <p><a href="#">Café da manha</a></p>
+                    <div class="content-flex-first">
+                      <p>Data</p>
+                      <p>Categoria</p>
+                      <p>Username</p>
                     </div>
                     <div>
-                      <p>data</p>
-                  </div>
+                </div>
                  
-                <a href="view-recipe.html" class="acess">
+                <a href="recipe_card.php" class="acess">
                     <button class="btn-acess">Veja a receita completa</button>
                 </a>
           </div>
@@ -63,27 +63,25 @@
           <h3 class="h3-categories">Categorias Receitas</h3>
           <ul>
               <li>
-                  <a href="category.html"> 
+                    <a href="view_recipes.php"> 
                       <img class="categories-img" src="../assets/img/recipes/pexels-dbaler-17486840.jpg" alt="">
-                  </a>
-                  <br>
-                  <span>CAFÉ DA MANHÃ</span>
+                    </a>
+                    <span class="span">CAFÉ DA MANHÃ</span>
               </li>
 
-              <li>
-                  <a href="category.html">
+                <li>
+                    <a href="view_recipes.php">
                       <img class="categories-img" src="../assets/img/recipes/pexels-ella-olsson-572949-1640772.jpg" alt="">
-                  </a>
-                  <br>
-                  <span>ALMOÇO</span>
-              </li>
+                    </a>
+                    <span class="span">ALMOÇO</span>
+                </li>
 
-              <li>
-                  <a href="category.html">
-                      <img class="categories-img" src="../assets/img/recipes/pexels-valeriya-842571.jpg" alt=""></a>
-                      <br>
-                      <span>JANTAR</span>
-                  </li>
+                <li>
+                    <a href="view_recipes.php">
+                      <img class="categories-img" src="../assets/img/recipes/pexels-valeriya-842571.jpg" alt="">
+                    </a>
+                    <span class="span">JANTAR</span>
+                </li>
           </ul>
       </nav>
 
@@ -105,7 +103,7 @@
                     </div>
                     <div>
                         <p class="content-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deserunt dicta qui ex rerum vitae nihil quos, inventore deltate explicabo laborum asperiores eaque beatae atque sunt? Tempora, vitae obcaecati.</p>
-                        <a href="view-recipe.html" class="acess">
+                        <a href="recipe_card.php" class="acess">
                             <button class="btn-acess">Veja a receita completa</button>
                         </a>
                     </div>
@@ -120,12 +118,12 @@
                         <p>data </p>
                         <p>Almoço</p>
                     </div>
-                    <div class="content-flex">
+                    <div class="recipe_card.php">
                         <h3>Lasanha De Berinjela</h3>
                     </div>
                     <div>
                         <p class="content-p"> Uma boa receita de lasanha para um final de semana em  família.</p>
-                        <a href="view-recipe.html" class="acess">
+                        <a href="recipe_card.php" class="acess">
                             <button class="btn-acess">Veja a receita completa</button>
                         </a>
                     </div>
@@ -144,7 +142,7 @@
                     </div>
                     <div>
                         <p class="content-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deserunt dicta qui ex rerum vitae nihil quos, inventore delectus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla ducimus minima tenetur non suscipit nemo magni. Veritatis beatae vitae, blanditiis id quasi sed nemo modi, repellat ullam, fugit numquam facere.</p>
-                        <a href="view-recipe.html" class="acess">
+                        <a href="recipe_card.php" class="acess">
                         <button class="btn-acess">Veja a receita completa</button>
                     </a>
                     </div>
@@ -162,7 +160,7 @@
                     </div>
                     <div>
                         <p class="content-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deserunt dicta qui ex rerum vitae nihil quos, inventore delectus </p>
-                        <a href="view-recipe.html" class="acess">
+                        <a href="recipe_card.php" class="acess">
                         <button class="btn-acess">Veja a receita completa</button>
                     </a>
                     </div>
