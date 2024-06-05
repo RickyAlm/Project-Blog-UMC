@@ -27,9 +27,7 @@
 </head>
 
 <body class="aller-regular">
-    <header class="header-create">
-        FUTURA HEADER
-    </header>
+    <?php require_once 'header.html';?>
 
     <section class="container-create">
         <form action="../assets/php/update_recipes.php" class="create form" method="post">

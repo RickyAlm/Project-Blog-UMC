@@ -5,7 +5,11 @@
 }
 
 body {
-  background: rgb(226, 226, 226);
+  /* background: rgb(226, 226, 226); */
+  background-image: url(../img/background/bloco2.png);
+  background-position: center ;
+  background-size: cover;
+  background-repeat: repeat;  
 }
 
 hr {

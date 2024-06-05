@@ -8,7 +8,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -28,7 +28,7 @@
   <section class="container">
     <div class="form-container">
       <h2 class="title galada-regular">Se Quiser Sim Receitas</h2>
-      <hr>
+      <hr">
 
       <form class="form" method="post">
         <div class="infos">
