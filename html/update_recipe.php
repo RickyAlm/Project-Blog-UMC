@@ -22,9 +22,12 @@
 
     <section class="container-create">
         <form action="../assets/php/update_recipes.php" class="create form" method="post" enctype="multipart/form-data">
-            <div class="update-img">
-                <p>UPLOAD</p>
-                <input type="file" name="recipe-image">
+            <div class="container">
+                <div class="image-preview" id="imagePreview">
+                    <input type="file" id="fileInput" accept="image/*" class="file-input" name="recipe-image" value="<?php echo($recipe_datas['recipe_image']) ?>">
+                    <img src="../assets/img/recipes_images/<?php echo($recipe_datas['recipe_image']) ?>" alt="Preview da Imagem" id="imgPreview" >
+                    <!-- <span class="image-preview__default-text">Preview da Imagem</span> -->
+                </div>
             </div>
 
             <div class="info-recipe">
@@ -138,8 +141,9 @@
             </div>
         </form>
     </section>
-
-
 </body>
+
+<script src="../assets/js/showSelectedImg.js"></script>
+
 
 </html>

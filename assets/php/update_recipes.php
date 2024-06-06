@@ -31,26 +31,25 @@ if($_POST) {
         fk_portion = '$portions', preparation_time = '$preparation_time',
         is_published = '$is_published'";
 
-    if (isset($_FILES['recipe-image'])) {
-        $a = "SELECT recipe_image FROM recipes WHERE pk_recipe = '$pk_recipe'";
-        $ab = $connection->query($a)->fetch_row()[0];
+    // if (isset($_FILES['recipe-image'])) {
+        // $a = "SELECT recipe_image FROM recipes WHERE pk_recipe = '$pk_recipe'";
+        // $ab = $connection->query($a)->fetch_row()[0];
 
-        if($_FILES['recipe-image'] != $ab){
-            unlink("../img/recipes_images/$ab");
-        }
+        // if($_FILES['recipe-image'] != $ab){
+        //     unlink("../img/recipes_images/$ab");
+        // }
 
-        $recipe_image = $_FILES['recipe-image'];
-        $fileName = $recipe_image['name'];
-        $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
-        $fileTempPath = $recipe_image['tmp_name'];
-        $fileSize = $recipe_image['size'];
-
+        // $recipe_image = $_FILES['recipe-image'];
+        // $fileName = $recipe_image['name'];
+        // $fileExtension = "jpg";
+        // $fileTempPath = $recipe_image['tmp_name'];
+    
         // Criar nome de arquivo único
-        $newFileName = uniqid() . "." . $fileExtension;
-        move_uploaded_file($fileTempPath, "../img/recipes_images/" . $newFileName);
+        // $newFileName = uniqid() . "." . $fileExtension;
+        // move_uploaded_file($fileTempPath, "../img/recipes_images/" . $newFileName);
 
-        $query_update_recipe .= ", recipe_image = '$newFileName'";
-    }
+        // $query_update_recipe .= ", recipe_image = '$newFileName'";
+    // }
 
     $query_update_recipe .= " WHERE pk_recipe = '$pk_recipe'";
 

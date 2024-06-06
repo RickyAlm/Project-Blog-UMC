@@ -23,8 +23,7 @@ if($_POST) {
     $fileName = $recipe_image['name'];
     $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
     $fileTempPath = $recipe_image['tmp_name'];
-    $fileSize = $recipe_image['size'];
-  
+
     // Criar nome de arquivo único
     $newFileName = uniqid() . "." . $fileExtension;
     move_uploaded_file($fileTempPath, "../img/recipes_images/" . $newFileName);

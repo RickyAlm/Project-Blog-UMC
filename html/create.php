@@ -38,7 +38,7 @@
         <form action="../assets/php/create_recipe.php" class="create form" method="post" enctype="multipart/form-data">
             <div class="container">
                 <div class="image-preview" id="imagePreview">
-                    <input type="file" id="fileInput" accept="image/*" class="file-input">
+                    <input type="file" id="fileInput" accept="image/*" class="file-input" name="recipe-image">
                     <img src="" alt="Preview da Imagem" id="imgPreview" class="image-preview__image">
                     <span class="image-preview__default-text">Preview da Imagem</span>
                 </div>
@@ -138,26 +138,7 @@
 
             <div class="ingredients-list">
                 <h3>Sua lista de ingredientes</h3>
-                <div class="ingredients-overflow">
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                    lista de ingredientes serão aqui(?)
-                </div>
+                <div class="ingredients-overflow"></div>
             </div>
 
             <div>
@@ -175,11 +156,9 @@
             </div>
         </form>
     </section>
-
-    <script src="../assets/js/showSelectedImg.js"></script>
-
 </body>
 
+<script src="../assets/js/showSelectedImg.js"></script>
 <script src="../assets/js/addNewIngredient.js"></script>
 
 </html>
