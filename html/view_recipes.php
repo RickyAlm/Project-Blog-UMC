@@ -42,7 +42,7 @@
 </head>
 
 <body class="aller-regular">
-    <?php require_once 'header.html';?>
+    <?php require_once 'header.php';?>
 
     <section class="category">
         <h1>Receitas</h1>

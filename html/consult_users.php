@@ -29,7 +29,7 @@
 </head>
 
 <body class="aller-regular">
-    <?php require_once 'header.html';?>
+    <?php require_once 'header.php';?>
 
     <form action="consult_users.php" class="InputContainer" method="get">
         <label for="input" class="labelforsearch">

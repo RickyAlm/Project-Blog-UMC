@@ -30,7 +30,7 @@ $check_session->sessionNotExists();
 
 <body class="aller-regular">
 
-<?php require_once 'header.html';?>
+<?php require_once 'header.php';?>
 
   <section class="container-update">
     <div class="form-block">

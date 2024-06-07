@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +24,6 @@
             <div class="logotipo">
                 <button class="hamburguer"></button>
                 <!-- <h1><a href="index.php" class="logo"><img src="../assets/img/icons/logotipo.png" alt=""></a></h1> -->
-                <picture class="logo"><img src="../assets/img/icons/preto_sem_fundo.webp" alt=""></picture>
             </div>
 
             <form action="view_recipes.php" class="InputContainer" method="get">
@@ -46,13 +47,14 @@
 
                 <li><a href="update.php" class="infos a">Meu Perfil</a></li>
 
-                <li><a href="consult_users.php" class="infos a">Permissões</a></li>
-
-                <li><a href="create.php" class="infos a">Criar Receita</a></li>
-
+                <?php
+                    $check_session->checkStaffEcho("<li><a href='consult_users.php' class='infos a'>Permissões</a></li>");
+                    $check_session->checkStaffEcho("<li><a href='create.php' class='infos a'>Criar Receita</a></li>");
+                    $check_session->checkStaffEcho("<li><a href='create.php' class='infos a'>Receitas Não Publicadas</a></li>");
+                ?>
 
                 <li class="infos2">
-                    <a href="" class="img a"><img class="nav-images nav-images2" src="../assets/img/icons/fork.png"
+                    <a href="create.php" class="img a"><img class="nav-images nav-images2" src="../assets/img/icons/fork.png"
                             alt="">
                     </a>
                     <a class="img a" href="update.php"><img class="nav-images nav-images2"

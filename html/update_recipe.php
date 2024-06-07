@@ -26,7 +26,7 @@
 </head>
 
 <body class="aller-regular">
-    <?php require_once 'header.html';?>
+    <?php require_once 'header.php';?>
 
     <section class="container-create">
         <form action="../assets/php/update_recipes.php" class="create form" method="post" enctype="multipart/form-data">
