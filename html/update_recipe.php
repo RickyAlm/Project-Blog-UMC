@@ -175,7 +175,7 @@
                         <input type='hidden' name='pk-recipe' value="<?php echo($recipe_datas['pk_recipe']); ?>">
                         <button class='form-btn' type='submit'>Atualizar</button>
                     </form>
-                    <button class="form-btn" id="delete-recipe-button" type="button">Deletar</button>
+                    <a href="../assets/php/delete_recipes.php?recipe=<?php echo($recipe_datas['pk_recipe'])?>"><button class="form-btn" id="delete-recipe-button" type="button">Deletar</button></a>
                 </div>
             </div>
         </form>

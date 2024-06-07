@@ -21,7 +21,7 @@
         <nav class="nav">
             <div class="logotipo">
                 <button class="hamburguer"></button>
-                <!-- <h1><a href="index.php" class="logo"><img src="../assets/img/icons/logotipo.png" alt=""></a></h1> -->
+                <a href="index.php" class="logo"><img src="../assets/img/icons/preto_sem_fundo.webp" alt=""></a>
             </div>
 
             <form action="view_recipes.php" class="InputContainer" method="get">

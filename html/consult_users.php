@@ -31,7 +31,7 @@
 <body class="aller-regular">
     <?php require_once 'header.php';?>
 
-    <form action="consult_users.php" class="InputContainer" method="get">
+    <form action="consult_users.php"  class="InputContainer InputContainer2" method="get">
         <label for="input" class="labelforsearch">
             <input type="search" name="q" class="input navbar" id="input" placeholder="Pesquisar...">
         </label>

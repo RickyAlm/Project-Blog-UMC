@@ -51,7 +51,7 @@
 </head>
 
 <body>
-    <?php require_once 'header.html';?>
+    <?php require_once 'header.php';?>
 
     <section class="recipe">
         <picture class="recipes-img">
@@ -124,11 +124,11 @@
         <?php
             if($_SESSION['user_session'] == $recipe_datas['fk_user']) {
                 echo("<div class='recipe-buttons'>
-                    <form action='update_recipe.php' method='post'>
+                    <form action='update_recipe.php' method='post' class='form-btn-con'>
                         <input type='hidden' name='pk-recipe' value='" . $pk_recipe . "'>
-                        <button class='form-btn' type='submit'>Atualizar</button>
+                        <button class='form-btn atu' type='submit'>Atualizar</button>
                     </form>
-                    <a href='../assets/php/delete_recipes.php?recipe=" . $pk_recipe. "'><button class='form-btn' id='delete-recipe-button' type='button'>Deletar</button></a>
+                    <a href='../assets/php/delete_recipes.php?recipe=" . $pk_recipe. "'class='adel'><button class='form-btn del' id='delete-recipe-button' type='button'>Deletar</button></a>
                 </div>"
                 );
             }

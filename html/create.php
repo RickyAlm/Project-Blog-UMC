@@ -39,8 +39,8 @@
             <div class="container">
                 <div class="image-preview" id="imagePreview">
                     <input type="file" id="fileInput" accept="image/*" class="file-input" name="recipe-image">
-                    <img src="" alt="Preview da Imagem" id="imgPreview" class="image-preview__image">
                     <span class="image-preview__default-text">Preview da Imagem</span>
+                    <img src="" alt="" id="imgPreview" class="image-preview__image">
                 </div>
             </div>
 

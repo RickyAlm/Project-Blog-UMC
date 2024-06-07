@@ -36,17 +36,17 @@
                 </div>
                 <div class="content">
                     <div class="content-flex-first">
-                        <p>Bolo de tapioca</p>
+                        <h2><strong>Bolo de tapioca</strong></h2>
                     </div>
                     <div class="content-flex-first">
-                        <p>Data</p>
-                        <p>Categoria</p>
-                        <p>Username</p>
+                        <p>Ricky</p>
+                        <p>07/06/2024</p>
+                        <p>Café da Manhã</p>
                     </div>
                     <div>
                     </div>
 
-                    <a href="recipe_card.php" class="acess">
+                    <a href="recipe_card.php?recipe=168" class="acess">
                         <button class="btn-acess">Veja a receita completa</button>
                     </a>
                 </div>
@@ -56,8 +56,17 @@
 
         </section>
 
-        <div class="button-container">
-            <button class="button-create">Crie sua conta!</button>
+        <div class="button-container">    
+        <?php 
+            session_start();
+
+            if(isset($_SESSION['user_session'])) {
+                echo('<a href="view_recipes.php"><button class="button-create">Veja todas as receitas</button></a>');
+            }
+            else {
+                echo('<a href="login.php"><button class="button-create">Crie sua conta!</button></a>');
+            }
+        ?>
         </div>
     </div>
 
@@ -66,25 +75,25 @@
             <h3 class="h3-categories">Categorias Receitas</h3>
             <ul>
                 <li>
-                    <a href="view_recipes.php">
+                    <a href="view_recipes.php?q=café+da+manhã">
                         <img class="categories-img" src="../assets/img/recipes/cafe-manha.jpg" alt="">
                     </a>
-                    <span class="span">CAFÉ DA MANHÃ</span>
+                    <span class="span"><strong>CAFÉ DA MANHÃ</strong></span>
                 </li>
 
                 <li>
-                    <a href="view_recipes.php">
+                    <a href="view_recipes.php?q=almoço">
                         <img class="categories-img" src="../assets/img/recipes/almoco.jpg"
                             alt="">
                     </a>
-                    <span class="span">ALMOÇO</span>
+                    <span class="span"><strong>ALMOÇO</strong></span>
                 </li>
 
                 <li>
-                    <a href="view_recipes.php">
+                    <a href="view_recipes.php?q=jantar">
                         <img class="categories-img" src="../assets/img/recipes/jantar.jpg" alt="">
                     </a>
-                    <span class="span">JANTAR</span>
+                    <span class="span"><strong>JANTAR</strong></span>
                 </li>
             </ul>
         </nav>
@@ -96,36 +105,14 @@
             <section class="container-food">
 
                 <picture class="container-food-img">
-                    <img src="../assets/img/recipes/pexels-ella-olsson-572949-1640772.jpg" alt="" class="food">
+                    <img src="../assets/img/recipes_images/6662806e85b95.jpg"" alt="" class="food">
                     <div class="content-flex">
-                        <p>nome</p>
-                        <p>data </p>
-                        <p>categoria</p>
-                    </div>
-                    <div class="content-flex">
-                        <h3>nome-receita</h3>
-                    </div>
-                    <div>
-                        <p class="content-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-                            deserunt dicta qui ex rerum vitae nihil quos, inventore deltate explicabo laborum asperiores
-                            eaque beatae atque sunt? Tempora, vitae obcaecati.</p>
-                        <a href="recipe_card.php" class="acess">
-                            <button class="btn-acess">Veja a receita completa</button>
-                        </a>
-                    </div>
-                </picture>
-
-
-                <picture class="container-food-img">
-
-                    <img src="../assets/img/recipes/pexels-ash-122861-376464.jpg" alt="" class="food">
-                    <div class="content-flex">
-                        <p>Gustavinho criador de receitas.</p>
-                        <p>data </p>
+                        <p>ricky</p>
+                        <p>07/06/2024</p>
                         <p>Almoço</p>
                     </div>
                     <div class="recipe_card.php">
-                        <h3>Lasanha De Berinjela</h3>
+                        <h3>Arroz Com Linguiça</h3>
                     </div>
                     <div>
                         <p class="content-p"> Uma boa receita de lasanha para um final de semana em família.</p>
@@ -137,21 +124,37 @@
 
 
                 <picture class="container-food-img">
-                    <img src="../assets/img/recipes/pexels-iamabdullahsheik-9792460.jpg" alt="" class="food">
+
+                    <img src="../assets/img/recipes_images/6662806e85b95.jpg" alt="" class="food">
                     <div class="content-flex">
-                        <p>nome</p>
-                        <p>data </p>
-                        <p>categoria</p>
+                        <p>ricky</p>
+                        <p>07/06/2024</p>
+                        <p>Almoço</p>
                     </div>
-                    <div class="content-flex">
-                        <h3>nome-receita</h3>
+                    <div class="recipe_card.php">
+                        <h3>Arroz Com Linguiça</h3>
                     </div>
                     <div>
-                        <p class="content-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-                            deserunt dicta qui ex rerum vitae nihil quos, inventore delectus Lorem ipsum, dolor sit amet
-                            consectetur adipisicing elit. Nulla ducimus minima tenetur non suscipit nemo magni.
-                            Veritatis beatae vitae, blanditiis id quasi sed nemo modi, repellat ullam, fugit numquam
-                            facere.</p>
+                        <p class="content-p"> Uma boa receita de lasanha para um final de semana em família.</p>
+                        <a href="recipe_card.php" class="acess">
+                            <button class="btn-acess">Veja a receita completa</button>
+                        </a>
+                    </div>
+                </picture>
+
+
+                <picture class="container-food-img">
+                    <img src="../assets/img/recipes_images/6662806e85b95.jpg"" alt="" class="food">
+                    <div class="content-flex">
+                        <p>ricky</p>
+                        <p>07/06/2024</p>
+                        <p>Almoço</p>
+                    </div>
+                    <div class="recipe_card.php">
+                        <h3>Arroz Com Linguiça</h3>
+                    </div>
+                    <div>
+                        <p class="content-p"> Uma boa receita de lasanha para um final de semana em família.</p>
                         <a href="recipe_card.php" class="acess">
                             <button class="btn-acess">Veja a receita completa</button>
                         </a>
@@ -161,16 +164,15 @@
                 <picture class="container-food-img">
                     <img src="../assets/img/recipes/pexels-fariphotography-803963.jpg" alt="" class="food">
                     <div class="content-flex">
-                        <p>nome</p>
-                        <p>data </p>
-                        <p>categoria</p>
+                        <p>ricky</p>
+                        <p>07/06/2024</p>
+                        <p>Almoço</p>
                     </div>
-                    <div class="content-flex">
-                        <h3>nome-receita</h3>
+                    <div class="recipe_card.php">
+                        <h3>Arroz Com Linguiça</h3>
                     </div>
                     <div>
-                        <p class="content-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-                            deserunt dicta qui ex rerum vitae nihil quos, inventore delectus </p>
+                        <p class="content-p"> Uma boa receita de lasanha para um final de semana em família.</p>
                         <a href="recipe_card.php" class="acess">
                             <button class="btn-acess">Veja a receita completa</button>
                         </a>
