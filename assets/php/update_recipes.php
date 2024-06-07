@@ -11,8 +11,6 @@ if($_POST) {
     $category = $_POST['category'];
     $preparation_time = $_POST['preparation-time'];
     $portions = $_POST['portions'];
-    $quantity = $_POST['quantity'];
-    $ingredients = $_POST['ingredients'];
     $pass_to_pass = $_POST['pass-to-pass'];
     $is_published = 1;
 
@@ -52,8 +50,24 @@ if($_POST) {
     // }
 
     $query_update_recipe .= " WHERE pk_recipe = '$pk_recipe'";
-
     $update_recipe = $connection->query($query_update_recipe);
+
+    $delete_contain = "DELETE FROM contain WHERE fk_recipe = '$pk_recipe'";
+    $query_delete = $connection->query($delete_contain);
+
+    for($i = 0; $i <= 5; $i++) {
+        if(isset($_POST["ingredients" . $i]) && isset($_POST["quantity" . $i])) {
+            $ingredients = $_POST["ingredients" . $i];
+            $quantity = $_POST["quantity" . $i];
+
+            $update_contain = (
+                "INSERT INTO contain(fk_recipe, quantity, fk_ingredient)
+                VALUES ('$pk_recipe', '$quantity', '$ingredients')"
+            );
+
+            $query_contain = $connection->query($update_contain);
+        }
+    }
 
     header('location: ../../html/recipe_card.php?recipe=' . $pk_recipe);
     exit;

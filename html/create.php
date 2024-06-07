@@ -32,7 +32,7 @@
 </head>
 
 <body class="aller-regular">
-<?php require_once 'header.html';?>
+    <?php require_once 'header.html';?>
 
     <section class="container-create">
         <form action="../assets/php/create_recipe.php" class="create form" method="post" enctype="multipart/form-data">
@@ -47,20 +47,20 @@
             <div class="info-recipe">
                 <label for="recipe-title" class="title">
                     <h3>Título da receita</h3>
-                    <input type="text" name="recipe-title" placeholder="Título" class="recipe-title" >
+                    <input type="text" name="recipe-title" placeholder="Título" class="recipe-title">
                 </label>
             </div>
 
             <!-- <div class="info-recipe"> -->
-                <label for="recipe-description">
-                    <h3 class="h3-description">Descrição</h3>
-                    <textarea name="recipe-description" id="" cols="30" rows="10"
-                        placeholder="Descrição da receita"></textarea>
-                </label>
+            <label for="recipe-description">
+                <h3 class="h3-description">Descrição</h3>
+                <textarea name="recipe-description" id="" cols="30" rows="10"
+                    placeholder="Descrição da receita"></textarea>
+            </label>
             <!-- </div> -->
             <hr>
             <div class="info-recipe">
-            <label for="portions">
+                <label for="portions">
                     <h3>Serve:</h3>
                     <select name="portions">
                         <option value='default' disabled selected>Selecione...</option>
@@ -88,39 +88,84 @@
                                 echo("<option value='" . $row['pk_category'] . "'>" . $row['category_name'] . "</option>");
                             }
                         ?>
-                        </select>
+                    </select>
                 </label>
             </div>
+
+            <hr>
 
             <div class="info-recipe">
                 <div class="ingredients">
                     <label for="quantity">
                         <h3>Quantidade</h3>
-                        <input type="text" name="quantity" placeholder="Insira a quantidade" class="quantity">
+                        <input type="text" name="quantity1" placeholder="Insira a quantidade" class="quantity"
+                            id="quantity">
+                        <input type="text" name="quantity2" placeholder="Insira a quantidade" class="quantity"
+                            id="quantity">
+                        <input type="text" name="quantity3" placeholder="Insira a quantidade" class="quantity"
+                            id="quantity">
+                        <input type="text" name="quantity4" placeholder="Insira a quantidade" class="quantity"
+                            id="quantity">
+                        <input type="text" name="quantity5" placeholder="Insira a quantidade" class="quantity"
+                            id="quantity">
                     </label>
 
                     <label for="ingredients">
                         <h3>Ingrediente</h3>
-                        <?php
-                            $class_index = 1;
-                            echo("<select name='ingredients" . $class_index . "'>");
-
-                            foreach($datas_ingredients as $row){
-                                echo("<option value='" . $row['pk_ingredient'] . "'>" . $row['ingredient_name'] . "</option>");
-                                $class_index += 1;
-                            }
+                        <select name='ingredients1' id="ingredients">
+                            <option value="" disabled selected>Selecione...</option>
+                            <?php
+                                foreach($datas_ingredients as $row){
+                                    echo("<option value='" . $row['pk_ingredient'] . "'>" . $row['ingredient_name'] . "</option>");
+                                }
                             ?>
-                            </select>
+                        </select>
+
+                        <select name='ingredients2' id="ingredients">
+                            <option value="" disabled selected>Selecione...</option>
+                            <?php
+                                foreach($datas_ingredients as $row){
+                                    echo("<option value='" . $row['pk_ingredient'] . "'>" . $row['ingredient_name'] . "</option>");
+                                }
+                            ?>
+                        </select>
+
+                        <select name='ingredients3' id="ingredients">
+                            <option value="" disabled selected>Selecione...</option>
+                            <?php
+                                foreach($datas_ingredients as $row){
+                                    echo("<option value='" . $row['pk_ingredient'] . "'>" . $row['ingredient_name'] . "</option>");
+                                }
+                            ?>
+                        </select>
+
+                        <select name='ingredients4' id="ingredients">
+                            <option value="" disabled selected>Selecione...</option>
+                            <?php
+                                foreach($datas_ingredients as $row){
+                                    echo("<option value='" . $row['pk_ingredient'] . "'>" . $row['ingredient_name'] . "</option>");
+                                }
+                            ?>
+                        </select>
+
+                        <select name='ingredients5' id="ingredients">
+                            <option value="" disabled selected>Selecione...</option>
+                            <?php
+                                foreach($datas_ingredients as $row){
+                                    echo("<option value='" . $row['pk_ingredient'] . "'>" . $row['ingredient_name'] . "</option>");
+                                }
+                            ?>
+                        </select>
                     </label>
 
-                    <div class="buttons">
+                <!-- <div class="buttoZzZns">
                         <button class="ingredients-buttons button-add" type="button">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                                 <path fill="none" d="M0 0h24v24H0z"></path>
                                 <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
                             </svg>
-                        </button>
-                        <button class="ingredients-buttons button-delete" type="button">
+                        </button> -->
+                    <!-- <button class="ingredients-buttons button-delete" type="button">
                             <div class="sign">
                                 <svg viewBox="0 0 16 16" class="bi bi-trash3-fill" fill="currentColor" height="18"
                                     width="18" xmlns="http://www.w3.org/2000/svg">
@@ -129,17 +174,12 @@
                                     </path>
                                 </svg>
                             </div>
-                        </button>
-                    </div>
+                        </button> -->
+                <!-- </div> -->
                 </div>
-
             </div>
+
             <hr>
-
-            <div class="ingredients-list">
-                <h3>Sua lista de ingredientes</h3>
-                <div class="ingredients-overflow"></div>
-            </div>
 
             <div>
                 <label for="pass-to-pass">
@@ -159,6 +199,5 @@
 </body>
 
 <script src="../assets/js/showSelectedImg.js"></script>
-<script src="../assets/js/addNewIngredient.js"></script>
 
 </html>

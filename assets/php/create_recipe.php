@@ -10,8 +10,6 @@ if($_POST) {
   $portion = $_POST['portions'];
   $pass_to_pass = $_POST['pass-to-pass'];
   $is_published = 1;
-  $ingredients = $_POST['ingredients1'];
-  $quantity = $_POST['quantity'];
   $pk_user = $_SESSION['user_session'];
 
   if(isset($_POST['is-published'])) {
@@ -47,12 +45,19 @@ if($_POST) {
   $get_last_recipe_pk = "SELECT pk_recipe FROM recipes ORDER BY pk_recipe DESC LIMIT 1";
   $query_pk_recipe = $connection->query($get_last_recipe_pk)->fetch_row()[0];
 
-  $insert_contain = (
-    "INSERT INTO contain(fk_recipe, quantity, fk_ingredient)
-    VALUES ('$query_pk_recipe', '$quantity', '$ingredients')"
-  );
+  for($i = 1; $i <= 5; $i++) {
+    if(isset($_POST["ingredients" . $i]) && isset($_POST["quantity" . $i])) {
+      $ingredients = $_POST["ingredients" . $i];
+      $quantity = $_POST["quantity" . $i];
 
-  $query_contain = $connection->query($insert_contain);
+      $insert_contain = (
+        "INSERT INTO contain(fk_recipe, quantity, fk_ingredient)
+        VALUES ('$query_pk_recipe', '$quantity', '$ingredients')"
+      );
+
+      $query_contain = $connection->query($insert_contain);
+    }
+  }
 
   header("location: ../../html/recipe_card.php?recipe=$query_pk_recipe");
   exit;

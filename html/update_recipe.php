@@ -2,6 +2,14 @@
     require_once "../assets/php/connection.php";
     require_once "../assets/php/recipe_datas.php";
     require_once '../assets/php/vendor/autoload.php';
+
+    $query_contain = "SELECT contain.quantity, contain.fk_ingredient, ingredients.ingredient_name
+    FROM contain, ingredients
+    WHERE
+        contain.fk_recipe = '$pk_recipe' AND ingredients.pk_ingredient = contain.fk_ingredient";
+
+    $datas_contain = $connection->query($query_contain);
+    $ingredients = $connection->query($query_contain);
 ?>
 
 <!DOCTYPE html>
@@ -91,32 +99,63 @@
                 <div class="ingredients">
                     <label for="quantity">
                         <h3>Quantidade</h3>
-                        <input type="text" name="quantity" placeholder="Insira a quantidade" value="<?php echo($recipe_datas['quantity']) ?>">
+                        <?php
+                            $i = 0;
+
+                            while ($row = $datas_contain->fetch_assoc()) {
+                                echo("
+                                    <input type='text' name='quantity" . $i . "' placeholder='Insira a quantidade' class='quantity' id='quantity' value='" . $row['quantity'] . "'>
+                                ");
+                                $i++;
+                            }
+                        ?>
                     </label>
 
                     <label for="ingredients">
-                        <h3>Ingredients</h3>
+                        <h3>Ingrediente</h3>
 
+                        <?php
+                            $i = 0;
+
+                            while ($row = $ingredients->fetch_assoc()) {
+                                echo("
+                                    <select name='ingredients" . $i . "' id='ingredients' name='ingredients" . $i . "'>
+                                        <option value='" . $row['fk_ingredient'] . "'>" . $row['ingredient_name'] . "</option>
+                                ");
+
+                                foreach($datas_ingredients as $row_ing) {
+                                    if($row_ing['pk_ingredient'] != $row['fk_ingredient']) {
+                                        echo("
+                                            <option value='" . $row_ing['pk_ingredient'] . "'>" . $row_ing['ingredient_name'] . "</option>"
+                                        );
+                                    }
+                                }
+                                echo('</select>');
+                                $i++;
+                            }
+                        ?>
                     </label>
 
-                    <button class="ingredients-buttons button-add" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
-                        </svg>
-                    </button>
-
-                    <button class="ingredients-buttons button-delete" type="button">
-                        <div class="sign">
-                            <svg viewBox="0 0 16 16" class="bi bi-trash3-fill" fill="currentColor" height="18"
-                                width="18" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5">
-                                </path>
+                <!-- <div class="buttoZzZns">
+                        <button class="ingredients-buttons button-add" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
                             </svg>
-                        </div>
-                    </button>
+                        </button> -->
+                    <!-- <button class="ingredients-buttons button-delete" type="button">
+                            <div class="sign">
+                                <svg viewBox="0 0 16 16" class="bi bi-trash3-fill" fill="currentColor" height="18"
+                                    width="18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5">
+                                    </path>
+                                </svg>
+                            </div>
+                        </button> -->
+                <!-- </div> -->
                 </div>
+            </div>
 
                 <div>
                     <label for="pass-to-pass">

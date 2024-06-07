@@ -160,7 +160,7 @@ input:not(:focus) {
 .ingredients {
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-end;
+    align-items: stretch;
     gap: 53px;
 }
 

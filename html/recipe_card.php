@@ -22,6 +22,13 @@
         exit;
     }
 
+    $query_contain = "SELECT contain.quantity, ingredients.ingredient_name
+    FROM contain, ingredients
+    WHERE
+        contain.fk_recipe = '$pk_recipe' AND ingredients.pk_ingredient = contain.fk_ingredient";
+
+    $datas_contain = $connection->query($query_contain);
+
     // Formata a data do banco de dados para o padrão brasileiro.
     $created_at = new DateTime($recipe_datas['created_at']);
     $formatted_date = $created_at->format('d/m/Y');
@@ -105,10 +112,11 @@
 
         <h3 class="h3-ingredients">Ingredientes</h3>
         <div class="ingredients-recipe">
-            <p>
-                <?php echo($recipe_datas['quantity']) ?> de
-                <?php echo($recipe_datas['ingredient_name']) ?>
-            </p>
+            <?php
+                while ($row = $datas_contain->fetch_assoc()) {
+                    echo("<p class=''>" . $row['quantity'] . " de " . $row['ingredient_name'] . "</p></br>");
+                }
+            ?>
         </div>
 
         <h3 class="h3-step">Passo a Passo</h3>
