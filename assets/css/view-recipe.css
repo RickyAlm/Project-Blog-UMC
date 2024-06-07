@@ -28,6 +28,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 0px 15px 10px rgba(78, 75, 75, 0.35);
 
+    width: 80%;
+
 }
 
 .h2-recipe {
@@ -109,14 +111,27 @@ body {
     font-size: clamp(1em, 3vh, 2.5em);
 }
 
-.method-preparation,
-.ingredients {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+.ingredients-recipe {
+   text-align: center;
 
     font-size: clamp(20px, 3vw, 30px);
 
     gap: 10px;
-    padding: 10px 30px;
-    margin: 20px 0;
+    /* padding: 10px 30px; */
+    margin: 10px 0;
+}
+
+.method-preparation{
+    max-width: 60%;
+    margin: 0 auto;
+    
+
+    font-size: clamp(20px, 3vw, 30px);
+
+}
+
+.step{
+    padding-bottom: 10px;
+    display: flex;
 }
