@@ -135,3 +135,42 @@ body {
     padding-bottom: 10px;
     display: flex;
 }
+
+.recipe-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* margin: 0 auto; */
+    /* width: 80%; */
+}
+
+.form-btn-con{
+    /* width: 80%; */
+}
+
+.form-btn{
+    margin: 0 auto;
+
+    border-radius: 15px;
+    
+    
+    padding: 5px;
+}
+
+.atu{
+    background-color: #363B61;
+    color: white;
+    padding-inline: 40px;
+}
+
+.del{
+    background-color: red;
+    color: white;
+    padding-inline: 40px;
+}
+

@@ -59,12 +59,12 @@ hr{
 }
 
 .image-preview {
-    max-width:100%;
-    height: 400px;
+    width:100%;
+    height: 300px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 
     font-size: 35px;
     
@@ -93,6 +93,16 @@ hr{
     position: absolute;
 }
 
+
+#imgPreview{
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .file-input {
     position: absolute;
     width: 100%;

@@ -2,7 +2,7 @@
 require_once "../assets/php/connection.php";
 
 // Indica a quantidade de itens que deve aparecer na página.
-$per_page = 6;
+$per_page = 3;
 // Armazena a página atual do usuário.
 $current_page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 // Armazena a página inicial.

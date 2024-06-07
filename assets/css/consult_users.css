@@ -153,3 +153,11 @@ td select {
 .delete-user:active .icon svg {
     transform: scale(0.8);
 }
+
+.InputContainer2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin: 20px auto;
+}
