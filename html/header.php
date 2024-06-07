@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,6 +46,12 @@
                 <li><a href="update.php" class="infos a">Meu Perfil</a></li>
 
                 <?php
+                    use Blog\models\CheckSession;
+
+                    require_once "../assets/php/connection.php";
+                    require_once '../assets/php/vendor/autoload.php';
+                
+                    $check_session = new CheckSession;
                     $check_session->checkStaffEcho("<li><a href='consult_users.php' class='infos a'>Permissões</a></li>");
                     $check_session->checkStaffEcho("<li><a href='create.php' class='infos a'>Criar Receita</a></li>");
                     $check_session->checkStaffEcho("<li><a href='create.php' class='infos a'>Receitas Não Publicadas</a></li>");
