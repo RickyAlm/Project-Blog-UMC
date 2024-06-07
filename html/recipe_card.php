@@ -12,6 +12,7 @@
 
     $pk_recipe = $_GET['recipe'];
 
+    // aqui
     $query_recipe = $connection->query($consult_recipe->selectRecipeNames($pk_recipe));
     $recipe_datas = $query_recipe->fetch_assoc();
 
@@ -50,15 +51,7 @@
 </head>
 
 <body>
-    <header class="header header-recipe">
-        <p class="logo">Logotipo</p>
-
-        <nav class="header-nav">
-            <ul>
-                <li><a href="index.html aller-regular">Página inicial</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php require_once 'header.html';?>
 
     <section class="recipe">
         <picture class="recipes-img">
@@ -114,7 +107,7 @@
         <div class="ingredients-recipe">
             <?php
                 while ($row = $datas_contain->fetch_assoc()) {
-                    echo("<p class=''>" . $row['quantity'] . " de " . $row['ingredient_name'] . "</p></br>");
+                    echo("<p class='ingredients-recipe'>" . $row['quantity'] . " de " . $row['ingredient_name'] . "</p></br>");
                 }
             ?>
         </div>

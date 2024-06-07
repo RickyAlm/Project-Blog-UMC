@@ -67,14 +67,14 @@
             <ul>
                 <li>
                     <a href="view_recipes.php">
-                        <img class="categories-img" src="../assets/img/recipes/pexels-dbaler-17486840.jpg" alt="">
+                        <img class="categories-img" src="../assets/img/recipes/cafe-manha.jpg" alt="">
                     </a>
                     <span class="span">CAFÉ DA MANHÃ</span>
                 </li>
 
                 <li>
                     <a href="view_recipes.php">
-                        <img class="categories-img" src="../assets/img/recipes/pexels-ella-olsson-572949-1640772.jpg"
+                        <img class="categories-img" src="../assets/img/recipes/almoco.jpg"
                             alt="">
                     </a>
                     <span class="span">ALMOÇO</span>
@@ -82,7 +82,7 @@
 
                 <li>
                     <a href="view_recipes.php">
-                        <img class="categories-img" src="../assets/img/recipes/pexels-valeriya-842571.jpg" alt="">
+                        <img class="categories-img" src="../assets/img/recipes/jantar.jpg" alt="">
                     </a>
                     <span class="span">JANTAR</span>
                 </li>
