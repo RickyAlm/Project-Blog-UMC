@@ -6,7 +6,7 @@
 $hostname = 'change-me';
 $username = 'change-me';
 $password = 'change-me';
-$database = 'umc_recipeblog';
+$database = 'umc_recipesblog';
 
 $connection = new mysqli($hostname, $username, $password, $database);
 
