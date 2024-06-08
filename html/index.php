@@ -51,15 +51,10 @@
                     </a>
                 </div>
             </div>
-
-
-
         </section>
 
         <div class="button-container">    
         <?php 
-            session_start();
-
             if(isset($_SESSION['user_session'])) {
                 echo('<a href="view_recipes.php"><button class="button-create">Veja todas as receitas</button></a>');
             }

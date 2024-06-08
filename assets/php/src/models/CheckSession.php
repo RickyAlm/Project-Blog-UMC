@@ -36,7 +36,7 @@ class CheckSession
   // Checa se o usuário é staff, se não for o redireciona para o index.
   public function checkStaff(): void
   {
-    if($_SESSION["permission"] != 2){
+    if(isset($_SESSION["permission"]) && $_SESSION["permission"] != 2){
       header("location: ../html/index.php");
       exit;
     }
@@ -45,7 +45,7 @@ class CheckSession
   // Checa se o usuário é staff e retorna o valor do parâmetro $exec.
   public function checkStaffEcho(string $exec): void
   {
-    if($_SESSION["permission"] == 2){
+    if(isset($_SESSION["permission"]) && $_SESSION["permission"] == 2){
       echo($exec);
     }
   }
