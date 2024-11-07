@@ -119,7 +119,6 @@
 
 
                 <picture class="container-food-img">
-
                     <img src="../assets/img/recipes_images/6662806e85b95.jpg" alt="" class="food">
                     <div class="content-flex">
                         <p>ricky</p>
@@ -139,7 +138,7 @@
 
 
                 <picture class="container-food-img">
-                    <img src="../assets/img/recipes_images/6662806e85b95.jpg"" alt="" class="food">
+                    <img src="../assets/img/recipes_images/6662806e85b95.jpg" alt="" class="food">
                     <div class="content-flex">
                         <p>ricky</p>
                         <p>07/06/2024</p>
@@ -175,9 +174,11 @@
                 </picture>
             </section>
         </div>
+        <?php require_once 'email_bootstrap.html';?>
+        <?php require_once 'footer.html';?>
     </main>
 
-    <?php require_once 'footer.html';?>
+
 
     <script src="../assets/js/backgroundNone.js"></script>
 </body>
