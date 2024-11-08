@@ -37,7 +37,7 @@ import {
         pass === true &&
         email === true
       ) {
-        window.location = 'http://localhost/ProjectRecipesBlog/Project-Blog-UMC/html/login.php';
+        window.location = '../html/login.php';
       }
     } catch(e) {
       console.log(e);
