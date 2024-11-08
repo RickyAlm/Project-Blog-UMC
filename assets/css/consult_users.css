@@ -154,10 +154,52 @@ td select {
     transform: scale(0.8);
 }
 
-.InputContainer2{
+.InputContainer {
+    width: 60%;
+    height: 35px;
+    /* margin: 10px; */
+
+    font-size: 25px;
+
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.InputContainer2{
+    max-width: 430px;
+    font-size: 16px;
+    display: flex;
+    /* justify-content: flex-end; */
     align-items: center;
 
+    padding-bottom: 6px;
     margin: 20px auto;
+    font-size: 16px !important;
+    align-items: center;
+
+    height: 35px;
+
+    justify-content: space-evenly;
+    align-items: baseline;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.select-filter {
+    border: none ;
+    font-size: 16px;
 }

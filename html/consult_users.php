@@ -31,10 +31,17 @@
 <body class="aller-regular">
     <?php require_once 'header.php';?>
 
-    <form action="consult_users.php"  class="InputContainer InputContainer2" method="get">
+    <form action="consult_users.php"  class="InputContainer2" method="get">
         <label for="input" class="labelforsearch">
             <input type="search" name="q" class="input navbar" id="input" placeholder="Pesquisar...">
         </label>
+
+        <label for="filter-is-staff"></label>
+        <select name='filter-is-staff' id='pk-permission' class="select-filter">
+            <option value='3'>Qualquer</option>
+            <option value='1'>Usuário</option>
+            <option value='2'>Staff</option>
+        </select>
 
         <button class="button-search">
             <svg viewBox="0 0 512 512" class="searchIcon">
@@ -43,13 +50,6 @@
                 </path>
             </svg>
         </button>
-
-        <label for="filter-is-staff"></label>
-        <select name='filter-is-staff' id='pk-permission"'>
-            <option value='3'>Qualquer</option>
-            <option value='1'>Usuário</option>
-            <option value='2'>Staff</option>
-        </select>
     </form>
 
     <div class=" responsive-table">
