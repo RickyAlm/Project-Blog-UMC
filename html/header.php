@@ -54,7 +54,7 @@
                     $check_session = new CheckSession;
                     $check_session->checkStaffEcho("<li><a href='consult_users.php' class='infos a'>Permissões</a></li>");
                     $check_session->checkStaffEcho("<li><a href='create.php' class='infos a'>Criar Receita</a></li>");
-                    $check_session->checkStaffEcho("<li><a href='create.php' class='infos a'>Receitas Não Publicadas</a></li>");
+                    // $check_session->checkStaffEcho("<li><a href='create.php' class='infos a'>Receitas Não Publicadas</a></li>");
                 ?>
 
                 <li class="infos2">

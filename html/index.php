@@ -98,9 +98,8 @@
             <h2 class="main-h2">Algumas receitas</h2>
 
             <section class="container-food">
-
                 <picture class="container-food-img">
-                    <img src="../assets/img/recipes_images/6662806e85b95.jpg"" alt="" class="food">
+                    <img src="../assets/img/recipes_images/6662806e85b95.jpg" alt="" class="food">
                     <div class="content-flex">
                         <p>ricky</p>
                         <p>07/06/2024</p>
@@ -177,8 +176,6 @@
         <?php require_once 'email_bootstrap.html';?>
         <?php require_once 'footer.html';?>
     </main>
-
-
 
     <script src="../assets/js/backgroundNone.js"></script>
 </body>
