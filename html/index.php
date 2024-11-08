@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/header.css">
 
     <link rel="shortcut icon" href="../assets/img/icons/favicon.ico" type="image/x-">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -173,11 +174,12 @@
                 </picture>
             </section>
         </div>
-        <?php require_once 'email_bootstrap.html';?>
+        <?php require_once 'email.html';?>
         <?php require_once 'footer.html';?>
     </main>
 
     <script src="../assets/js/backgroundNone.js"></script>
+    <script src="../assets/js/checkEmail.js"></script>
 </body>
 
 </html>
