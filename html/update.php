@@ -42,31 +42,31 @@ $check_session->sessionNotExists();
 
           <form class="form" method="post">
             <div class="infos">
-              <input type="text" class="input" name="first-name" placeholder="Nome" maxlength="30"
+              <input type="text" class="input-update input" name="first-name" placeholder="Nome" maxlength="30"
                 value="<?php echo($first_name) ?>">
-              <span class="input-info first-name-dn">Use apenas letras.</span>
+              <span class="input-info first-name-dn input">Use apenas letras.</span>
             </div>
 
             <div class="infos">
-              <input type="text" class="input" name="last-name" placeholder="Sobrenome" maxlength="30"
+              <input type="text" class="input-update input" name="last-name" placeholder="Sobrenome" maxlength="30"
                 value="<?php echo($last_name) ?>">
               <span class="input-info last-name-dn">Use apenas letras.</span>
             </div>
 
             <div class="infos">
-              <input type="text" class="input" name="username" placeholder="Apelido" maxlength="30"
+              <input type="text" class="input-update input" name="username" placeholder="Apelido" maxlength="30"
                 value="<?php echo($username) ?>">
               <span class="input-info username-dn">Use apenas letras, números e _</span>
             </div>
 
             <div class="infos">
-              <input type="email" class="input" name="email" placeholder="E-mail" maxlength="30"
+              <input type="email" class="input-update input" name="email" placeholder="E-mail" maxlength="30"
                 value="<?php echo($email) ?>">
               <span class="input-info email-dn">Use apenas letras, números, @ e .</span>
             </div>
 
             <!-- <div class="infos container-password">
-              <input type="password" class="input password" name="password" placeholder="Senha" minlength="8"
+              <input type="password" class="input-update password" name="password" placeholder="Senha" minlength="8"
                 maxlength="60" id="pass">
               <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="olho"
                 class="olho">

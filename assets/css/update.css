@@ -54,7 +54,7 @@ a{
   font-size: clamp(1.9em, 2.5vw, 2.2em);
 }
 
-.input:focus{
+.input-update:focus{
   transform: scale(1.05);
   transition: 300ms ease-in-out;
 
@@ -65,7 +65,7 @@ a{
   margin-left:4px;
 }
 
-.input:not(:focus){
+.input-update:not(:focus){
   transform: scale(1);
   transition: 300ms ease-in-out;
   border: 1px solid var(--secundary-color);
