@@ -95,7 +95,6 @@ a, ul, li{
 .logo{
   margin-bottom: 0;
   color: white;
-  background-color: #cac6c23a;
 }
 
 /** ##########################*/
@@ -224,9 +223,9 @@ a, ul, li{
   font-size: clamp(1em, 3vw, 1.9em);
 }
 
-main{
+/* main{
   margin-bottom: 10px;
-}
+} */
 
 .main-h2{
   font-size: clamp(1.5em, 10vw, 3em);
@@ -251,7 +250,7 @@ main{
 
 
 .button-container {
-  width: 30%;
+  width: 40%;
   height: auto;
   margin: 25px auto;
   padding: 10px;
@@ -387,13 +386,12 @@ main{
   justify-items: center;
 
   grid-template-columns: 2fr 2fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 0.1fr;
   gap: 20px;
 
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   padding: 20px;
-  
 }
 
 .food{
@@ -410,7 +408,7 @@ main{
   transform: scale(1);
   transition: all 300ms ease-in-out;
 
-  width: 80%;
+  width: 90%;
   height: auto;
 
   display: flex;
@@ -419,7 +417,6 @@ main{
   align-items: center;
 
   padding: 10px;
-
 }
 
 
