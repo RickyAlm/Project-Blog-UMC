@@ -166,12 +166,12 @@ a{
 
 .nav.active .hamburguer::before {
     transform: rotate(-220deg);
-    background-color: rgb(47, 0, 255);
+    background-color: white;
 }
 
 .nav.active .hamburguer::after {
     transform: rotate(-220deg);
-    background-color: rgb(47, 0, 255);
+    background-color: white;
     top: -7;
 }
 
