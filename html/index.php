@@ -174,7 +174,7 @@
                 </picture>
             </section>
         </div>
-        <?php require_once 'email.html';?>
+        <?php require_once 'email.php';?>
         <?php require_once 'footer.html';?>
     </main>
 

@@ -137,23 +137,19 @@
       border-radius: .3rem;
     }
 
-      /* Media Queries para telas menores */
-      @media (max-width: 767px) {
-        /* Para telas menores que 767px, as colunas vão empilhar */
-        .col-7, .col-5 {
-          flex: 0 0 100%;
-          max-width: 100%;
-        }
+    @media (max-width: 767px) {
+      .col-7, .col-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
       }
+    }
 
-      @media (max-width: 767px) {
-        #texto-campo-email p {
-          font-size: 1.1rem; /* Ajusta o texto para telas menores */
-          margin-bottom: 18px;
-          /* padding-left: 20px;
-          padding-right: 20px; */
-        }
+    @media (max-width: 767px) {
+      #texto-campo-email p {
+        font-size: 1.1rem;
+        margin-bottom: 18px;
       }
+    }
   </style>
 </head>
 <body>
@@ -179,7 +175,19 @@
                   <textarea class="form-control aller-regular" id="email_msg" rows="20"></textarea>
                 </div>
 
-                <button id="btn_send_email" type="button" class="btn btn-lg btn-block">Enviar</button>
+                <?php
+                  $button_text = 'Enviar';
+                  $button_disabled = '';
+                  $cursor_style = '';
+
+                  if(!isset($_SESSION['user_session'])) {
+                    $button_text = 'Faça login para enviar';
+                    $button_disabled = 'disabled';
+                    $cursor_style = 'cursor: not-allowed;';
+                  }
+
+                  echo "<button id='btn_send_email' type='button' class='btn btn-lg btn-block' {$button_disabled} style='{$cursor_style}'>{$button_text}</button>";
+                ?>
               </form>
             </div>
           </div>
