@@ -11,8 +11,6 @@
 body{
   /* background-color: var(--fourth-color); */
   background-image: url(../img/background/bloco2.png);
-  background-size: cover;
-  background-position: center;
 }
 
 a{

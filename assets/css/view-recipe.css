@@ -11,10 +11,7 @@
 body {
     /* background-color: rgba(166, 189, 209, 0.274); */
     background-image: url(../img/background/bloco2.png);
-    background-position: center;
-    background-size: cover;
 }
-
 
 .recipe {
     margin: 0 auto;
@@ -146,10 +143,6 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     /* margin: 0 auto; */
-    /* width: 80%; */
-}
-
-.form-btn-con{
     /* width: 80%; */
 }
 
