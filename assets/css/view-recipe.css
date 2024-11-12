@@ -25,26 +25,33 @@ body {
     border-radius: 15px;
     box-shadow: 0 0px 15px 10px rgba(78, 75, 75, 0.35);
 
-    width: 80%;
+    width: 60%;
 
 }
 
 .h2-recipe {
     text-align: center;
-    font-size: clamp(2em, 10vw, 5em);
+    font-size: 55px;
 
     margin: 20px 0;
     padding: 30px 0;
 }
 
 .recipes-img {
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.recipes-info {
+    font-size: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
     margin-bottom: 30px;
 
-    gap: 30px;
+    gap: 25px;
     order: 1;
 }
 
@@ -56,9 +63,17 @@ body {
 }
 
 .food-recipes {
-    max-width: 400px;
-    min-width: 190px;
+    width: 80%;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
+.food-recipes img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 15px;
 }
 
@@ -80,7 +95,7 @@ body {
 .description {
     text-align: center;
     padding: 10px;
-    font-size: clamp(18px, 5vw, 25px);
+    font-size: 23px;
 
     margin: 20px auto;
 
@@ -94,7 +109,8 @@ body {
     background-color: #ccc;
     padding: 20px 0;
     margin-bottom: 20px;
-    font-size: clamp(1em, 3vw, 3em);
+    font-size: 30px;
+    font-style: bold;
 }
 
 .h3-ingredients,

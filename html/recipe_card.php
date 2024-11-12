@@ -56,7 +56,7 @@
     <section class="recipe">
         <picture class="recipes-img">
             <div>
-                <img src="../assets/img/recipes_images/<?php echo($recipe_datas['recipe_image']) ?>" class="food food-recipes">
+                <img src="../assets/img/recipes_images/<?php echo($recipe_datas['recipe_image']) ?>" class="food-recipes">
             </div>
         </picture>
 
@@ -65,7 +65,7 @@
                 <?php echo($recipe_datas['title_recipe']); ?>
             </h2>
 
-            <picture class="recipes-img">
+            <picture class="recipes-info">
                 <div class="h3-favicon">
                     <img src="../assets/img/icons/favicon.ico" alt="favicon">
                     <h3 class="h3-description">Autor:
