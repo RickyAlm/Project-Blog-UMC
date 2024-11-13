@@ -42,12 +42,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | <?php echo($recipe_datas['title_recipe']) ?></title>
-    <link rel="shortcut icon" href="../assets/img/icons/chefe-de-cozinha-cinza.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/icons/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/view-recipe.css">
     <link rel="stylesheet" href="../assets/css/media-query.css">
     <link rel="stylesheet" href="../assets/css/font-aller.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -88,16 +89,16 @@
                 </div>
             </picture>
 
-            <p class="description">
+            <p class="description aller-regular">
                 <?php echo($recipe_datas['description_recipe']); ?>
             </p>
 
             <div class="timer aller-regular">
-                <p class="aller-regular">Preparo:
+                <p class="aller-regular"><strong>Preparo:</strong>
                     <?php echo($recipe_datas['preparation_time']); ?>
                 </p>
 
-                <p class="aller-regular">Porções:
+                <p class="aller-regular"><strong>Porções:</strong>
                     <?php echo($recipe_datas['portions_name']); ?>
                 </p>
             </div>
@@ -107,7 +108,7 @@
         <div class="ingredients-recipe">
             <?php
                 while ($row = $datas_contain->fetch_assoc()) {
-                    echo("<p class='ingredients-recipe'>" . $row['quantity'] . " de " . $row['ingredient_name'] . "</p></br>");
+                    echo("<p class='ingredients-recipe aller-regular'>" . $row['quantity'] . " de " . $row['ingredient_name'] . "</p></br>");
                 }
             ?>
         </div>
@@ -115,7 +116,7 @@
         <h3 class="h3-step">Passo a Passo</h3>
         <div class="method-preparation">
             <div class="steps">
-                <p class="step">
+                <p class="step aller-regular">
                     <?php echo($recipe_datas['pass_to_pass']); ?>
                 </p>
             </div>
