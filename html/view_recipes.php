@@ -72,7 +72,7 @@
             </ul>
         </nav>
     </section>
-    <?php//require_once 'footer.html';?>
+
 </body>
 
 </html>

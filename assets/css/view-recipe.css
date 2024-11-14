@@ -16,6 +16,7 @@ body {
 .recipe {
     margin: 0 auto;
     padding-bottom: 1px;
+    margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.9);
 
     background-image: url(../img/background/ORFF0J0\ 2.png);
@@ -130,7 +131,7 @@ body {
 
 .method-preparation{
     max-width: 75%;
-    font-size: 25px;
+    font-size: 23px;
     padding: 10px 0px 0px 120px;
 }
 
@@ -156,8 +157,8 @@ body {
     width: 200px;
 }
 
-.form-btn{
-    margin: 0 auto;
+.form-btns {
+    /* margin: 0 auto; */
     border-radius: 15px;
     padding: 5px;
 }

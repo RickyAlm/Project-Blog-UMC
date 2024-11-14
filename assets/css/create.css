@@ -181,14 +181,17 @@ option {
     color: white;
 }
 
-label {
+.input-label {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 10px;
 
     font-size: clamp(1.2em, 2vw, 2.5em);
+}
 
+.input-label textarea {
+    font-size: 20px;
 }
 
 .recipe-description{
@@ -325,7 +328,7 @@ label {
     transition: 200ms ease-in-out;
 }
 
-#delete-recipe-button {
+/* #delete-recipe-button {
     background: #ca0808;
     border: 1px solid black;
 }
@@ -333,4 +336,4 @@ label {
 #delete-recipe-button:hover {
     background: #aa1d1d;
     transition: 200ms ease-in-out;
-}
+} */

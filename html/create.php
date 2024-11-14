@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="../assets/css/media-query.css">
     <link rel="stylesheet" href="../assets/css/create.css">
     <link rel="stylesheet" href="../assets/css/font-aller.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/view-recipe.css">
 </head>
 
 <body class="aller-regular">
@@ -45,22 +47,22 @@
             </div>
 
             <div class="info-recipe">
-                <label for="recipe-title" class="title">
+                <label for="recipe-title" class="title input-label">
                     <h3>Título da receita</h3>
                     <input type="text" name="recipe-title" placeholder="Título" class="recipe-title">
                 </label>
             </div>
 
             <!-- <div class="info-recipe"> -->
-            <label for="recipe-description">
-                <h3 class="h3-description">Descrição</h3>
-                <textarea name="recipe-description" id="" cols="30" rows="10"
+            <label for="recipe-description" class="input-label">
+                <h3 class="h3-description input-label">Descrição</h3>
+                <textarea name="recipe-description" id="" class="aller-regular" cols="30" rows="10"
                     placeholder="Descrição da receita"></textarea>
             </label>
             <!-- </div> -->
             <hr>
             <div class="info-recipe">
-                <label for="portions">
+                <label for="portions" class="input-label">
                     <h3>Serve:</h3>
                     <select name="portions">
                         <option value='default' disabled selected>Selecione...</option>
@@ -72,12 +74,12 @@
                     </select>
                 </label>
 
-                <label for="preparation-time">
+                <label for="preparation-time" class="input-label">
                     <h3>Tempo de Preparo</h3>
                     <input placeholder="xx minutos" type="text" name="preparation-time" class="preparation-time">
                 </label>
 
-                <label for="ingredients">
+                <label for="ingredients" class="input-label">
                     <h3>Categoria</h3>
 
                     <select name="category">
@@ -96,7 +98,7 @@
 
             <div class="info-recipe">
                 <div class="ingredients">
-                    <label for="quantity">
+                    <label for="quantity" class="input-label">
                         <h3>Quantidade</h3>
                         <input type="text" name="quantity1" placeholder="Insira a quantidade" class="quantity"
                             id="quantity">
@@ -110,7 +112,7 @@
                             id="quantity">
                     </label>
 
-                    <label for="ingredients">
+                    <label for="ingredients" class="input-label">
                         <h3>Ingrediente</h3>
                         <select name='ingredients1' id="ingredients">
                             <option value="" disabled selected>Selecione...</option>
@@ -182,20 +184,21 @@
             <hr>
 
             <div>
-                <label for="pass-to-pass">
+                <label for="pass-to-pass" class="input-label">
                     <h3>Passo a passo</h3>
-                    <textarea name="pass-to-pass" cols="30" rows="10" placeholder="Insira o passo a passo"></textarea>
+                    <textarea name="pass-to-pass" cols="30" rows="10" class="aller-regular" placeholder="Insira o passo a passo"></textarea>
                 </label>
             </div>
             <hr>
             <div class="btns">
-                <label for="is-published" class="checkbox">Publicado?
+                <label for="is-published" class="checkbox input-label">Publicado?
                     <input type="checkbox" name="is-published" value="2">
                 </label>
                 <button class="form-btn" type="submit">Enviar</button>
             </div>
         </form>
     </section>
+    <?php require_once 'footer.html';?>
 </body>
 
 <script src="../assets/js/showSelectedImg.js"></script>

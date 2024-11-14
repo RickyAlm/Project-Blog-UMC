@@ -127,14 +127,16 @@
                 echo("<div class='recipe-buttons'>
                     <form action='update_recipe.php' method='post' class='form-btn-con'>
                         <input type='hidden' name='pk-recipe' value='" . $pk_recipe . "'>
-                        <button class='form-btn atu' type='submit'>Atualizar</button>
+                        <button class='form-btns atu' type='submit'>Atualizar</button>
                     </form>
-                    <a href='../assets/php/delete_recipes.php?recipe=" . $pk_recipe. "'class='adel'><button class='form-btn del' id='delete-recipe-button' type='button'>Deletar</button></a>
+                    <a href='../assets/php/delete_recipes.php?recipe=" . $pk_recipe. "'class='adel'><button class='form-btns del' id='delete-recipe-button' type='button'>Deletar</button></a>
                 </div>"
                 );
             }
         ?>
     </section>
+
+    <?php require_once 'footer.html';?>
 </body>
 
 </html>
