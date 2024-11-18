@@ -32,7 +32,7 @@
 
       <form class="form" method="post">
         <div class="infos">
-          <input type="username" class="input" name="username" placeholder="Apelido" maxlength="30">
+          <input type="username" class="input" name="username" placeholder="Nome de usuário" maxlength="30">
           <span class="input-info username-dn"></span>
         </div>
 

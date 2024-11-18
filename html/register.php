@@ -40,7 +40,7 @@
         </div>
 
         <div class="infos">
-          <input type="text" class="input" name="username" placeholder="Apelido" maxlength="30" required>
+          <input type="text" class="input" name="username" placeholder="Nome de Usuário" maxlength="30" required>
           <span class="input-info username-dn"></span>
         </div>
 
