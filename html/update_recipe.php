@@ -159,18 +159,18 @@
             </div>
 
             <!-- <label for="is-published" class="checkbox">Publicado?
-                <input type="checkbox" name="is-published" value="2" <?php if($recipe_datas['is_published'] == 2) echo 'checked'; ?>>
+                <input type="checkbox" name="is-published" value="2" <?php // if($recipe_datas['is_published'] == 2) echo 'checked'; ?>>
             </label> -->
 
             <hr>
 
             <div class="recipe-buttons">
                 <form action="update_recipe.php" method="post" class="form-btn-con">
-                    <input type="hidden" name="pk-recipe" value="123">
+                    <input type="hidden" name="pk-recipe" value="<?php echo($recipe_datas['pk_recipe']); ?>">
                     <button class="form-btns atu" type="submit">Atualizar</button>
                 </form>
 
-                <a href="../assets/php/delete_recipes.php?recipe=123" class="adel">
+                <a href="../assets/php/delete_recipes.php?recipe=<?php echo($recipe_datas['pk_recipe'])?>" id="delete-recipe-button" class="adel">
                     <button class="form-btns del" id="delete-recipe-button" type="button">Deletar</button>
                 </a>
             </div>

@@ -175,10 +175,10 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .container-food picture:last-child{
+  /* .container-food picture:last-child{
     display: none;
-  }
-  
+  } */
+
 }
 
 @media (max-width: 850px){
