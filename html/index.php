@@ -102,76 +102,57 @@
                 <picture class="container-food-img">
                     <img src="../assets/img/recipes_images/6662806e85b95.jpg" alt="" class="food">
                     <div class="content-flex">
-                        <p>ricky</p>
+                        <p>Rick</p>
                         <p>07/06/2024</p>
                         <p>Almoço</p>
                     </div>
                     <div class="recipe_card.php">
-                        <h3>Arroz Com Linguiça</h3>
+                        <h3>Macarrão com Queijo</h3>
                     </div>
                     <div>
-                        <p class="content-p"> Uma boa receita de lasanha para um final de semana em família.</p>
-                        <a href="recipe_card.php" class="acess">
+                        <p class="content-p">Macarrão com queijo, ou "mac and cheese" em inglês, é um prato clássico e reconfortante que combina macarrão (geralmente cotovelos ou penne) com um molho cremoso de queijo.</p>
+                        <a href="recipe_card.php?recipe=157" class="acess">
                             <button class="btn-acess">Veja a receita completa</button>
                         </a>
                     </div>
                 </picture>
-
 
                 <picture class="container-food-img">
                     <img src="../assets/img/recipes_images/6662806e85b95.jpg" alt="" class="food">
                     <div class="content-flex">
-                        <p>ricky</p>
-                        <p>07/06/2024</p>
+                        <p>Rick</p>
+                        <p>21/11/2024</p>
                         <p>Almoço</p>
                     </div>
                     <div class="recipe_card.php">
-                        <h3>Arroz Com Linguiça</h3>
+                        <h3>Macarrão com Queijo</h3>
                     </div>
                     <div>
-                        <p class="content-p"> Uma boa receita de lasanha para um final de semana em família.</p>
-                        <a href="recipe_card.php" class="acess">
+                        <p class="content-p">Macarrão com queijo, ou "mac and cheese" em inglês, é um prato clássico e reconfortante que combina macarrão (geralmente cotovelos ou penne) com um molho cremoso de queijo.</p>
+                        <a href="recipe_card.php?recipe=163" class="acess">
                             <button class="btn-acess">Veja a receita completa</button>
                         </a>
                     </div>
                 </picture>
-
 
                 <picture class="container-food-img">
                     <img src="../assets/img/recipes_images/6662806e85b95.jpg" alt="" class="food">
                     <div class="content-flex">
-                        <p>ricky</p>
-                        <p>07/06/2024</p>
+                        <p>Rick</p>
+                        <p>21/11/2024</p>
                         <p>Almoço</p>
                     </div>
                     <div class="recipe_card.php">
-                        <h3>Arroz Com Linguiça</h3>
+                        <h3>Macarrão com Queijo</h3>
                     </div>
                     <div>
-                        <p class="content-p"> Uma boa receita de lasanha para um final de semana em família.</p>
-                        <a href="recipe_card.php" class="acess">
+                        <p class="content-p">Macarrão com queijo, ou "mac and cheese" em inglês, é um prato clássico e reconfortante que combina macarrão (geralmente cotovelos ou penne) com um molho cremoso de queijo.</p>
+                        <a href="recipe_card.php?recipe=163" class="acess">
                             <button class="btn-acess">Veja a receita completa</button>
                         </a>
                     </div>
                 </picture>
 
-                <picture class="container-food-img">
-                    <img src="../assets/img/recipes/pexels-fariphotography-803963.jpg" alt="" class="food">
-                    <div class="content-flex">
-                        <p>ricky</p>
-                        <p>07/06/2024</p>
-                        <p>Almoço</p>
-                    </div>
-                    <div class="recipe_card.php">
-                        <h3>Arroz Com Linguiça</h3>
-                    </div>
-                    <div>
-                        <p class="content-p"> Uma boa receita de lasanha para um final de semana em família.</p>
-                        <a href="recipe_card.php" class="acess">
-                            <button class="btn-acess">Veja a receita completa</button>
-                        </a>
-                    </div>
-                </picture>
             </section>
         </div>
         <?php require_once 'email.php';?>
