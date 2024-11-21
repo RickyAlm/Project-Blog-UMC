@@ -153,7 +153,7 @@
                 <div>
                     <label for="pass-to-pass" class="input-label">
                         <h3>Passo a passo</h3>
-                        <textarea name="pass-to-pass" cols="30" rows="10"><?php echo($recipe_datas['pass_to_pass']) ?></textarea>
+                        <textarea class="aller-regular" name="pass-to-pass" cols="30" rows="10"><?php echo($recipe_datas['pass_to_pass']) ?></textarea>
                     </label>
                 </div>
             </div>

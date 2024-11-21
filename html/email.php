@@ -14,7 +14,7 @@
           <div class="row">
             <div id="texto-campo-email" class="col-7 col-sm-7 col-md-7">
               <h1>Compartilhe sua sugestão!</h1>
-              <p>Utilize sua criatividade e preencha o campo de e-mail ao lado para nos enviar suas receitas e ideias para o blog. Se tiver alguma dúvida ou feedback sobre qualquer tópico, fique à vontade para usar este espaço. Sua opinião é essencial para mantermos o blog sempre atualizado e relevante!</p>
+              <p class="aller-regular">Utilize sua criatividade e preencha o campo de e-mail ao lado para nos enviar suas receitas e ideias para o blog. Se tiver alguma dúvida ou feedback sobre qualquer tópico, fique à vontade para usar este espaço. Sua opinião é essencial para mantermos o blog sempre atualizado e relevante!</p>
             </div>
 
             <div class="col-5 col-sm-5 col-md-5">

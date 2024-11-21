@@ -9,17 +9,17 @@ foreach($sql_query as $row){
                 <img src='../assets/img/recipes_images/" . $row['recipe_image'] . "' alt='Imagem da Receita' class='food-category'>
             </picture>
 
-            <div class='content-flex'>
+            <div class='content-flex aller-regular'>
                 <p>" . $row['username'] . "</p>
                 <p>" . $formatted_date . "</p>
                 <p>" . $row['category_name'] . "</p>
             </div>
 
             <div class='content-flex'>
-                <h3>" . $row['title_recipe'] . "</h3>
+                <h3><strong>" . $row['title_recipe'] . "</strong></h3>
             </div>
 
-            <div class='content-flex'>
+            <div class='content-flex '>
                 <p>" . $row['description_recipe'] . "</p>
             </div>
 

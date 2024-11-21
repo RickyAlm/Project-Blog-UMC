@@ -44,7 +44,7 @@
 <body class="aller-regular">
     <?php require_once 'header.php';?>
 
-    <section class="category">
+    <section class="category aller-regular">
         <h1>Receitas</h1>
         <h2>
             Sua pesquisa:
@@ -58,7 +58,7 @@
             ?>
         </h2>
 
-        <div class="container-category">
+        <div class="container-category aller-regular">
             <?php
                 // Verifica se existe algum registro na consulta.
                 if($total_recipes == 0) echo("<h2 class='display-5 text-center'>Nenhuma receita foi encontrada</h2>");

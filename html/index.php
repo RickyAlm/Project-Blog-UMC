@@ -101,7 +101,7 @@
             <section class="container-food">
                 <picture class="container-food-img">
                     <img src="../assets/img/recipes_images/6662806e85b95.jpg" alt="" class="food">
-                    <div class="content-flex">
+                    <div class="content-flex aller-regular">
                         <p>Rick</p>
                         <p>07/06/2024</p>
                         <p>Almoço</p>
