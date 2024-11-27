@@ -24,7 +24,7 @@ import { checkUsername, checkPassword } from './functionsFormDatas.js';
       // Se o nome de usuário e senhas estiverem corretos, redireciona o usuário
       // para a home, já logado.
       if(user === true && pass === true) {
-        window.location.replace('http://localhost/Project-Blog-UMC/html/');
+        window.location.replace('../html/index.php');
       }
     } catch(e) {
       console.log(e);

@@ -61,6 +61,7 @@ a{
 
 .labelforsearch {
     cursor: text;
+    margin-bottom: 0px;
 }
 
 .button-search {
